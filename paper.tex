@@ -2,7 +2,7 @@
 \usepackage{amsfonts}
 \usepackage{amssymb}
 \usepackage{graphicx}
-
+\usepackage{siunitx}
 \title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}
 
 \author{Mark~H.~Jones, and Prof.~Jonathan~Scott}
@@ -36,21 +36,23 @@
     Removing batteries from electrical meters also reduces unwanted electrical waste.
 
     Streaming cells are commonly used in membrane science to determine the zeta potential of a membrane surface.
-    This is an important factor in the design and operation of membrane based processes. \cite{Daiguji2004b}
+    This is an important factor in the design and operation of membrane based processes.\cite{Daiguji2004b}
     A streaming cell contains one or more narrow channels (sometimes a porous material is used as the channel) across which a pressure gradient is applied.
     The application of a pressure gradient across the cell forces fluid through the cell and causes a streaming current, which in turn, creates voltage differential across the cell.
     This voltage differential is called the streaming potential.
 
-    Streaming currents have been heavily investigated as a means of generating electrical energy from pressure gradients. \cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}
-    Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\% for pure water and 7\% for sodium chloride. \cite{VanderHeyden2006}
+    Streaming currents have been heavily investigated as a means of generating electrical energy from pressure gradients.
+    \cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}
+    Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\% for pure water and 7\% for sodium chloride.
+    \cite{VanderHeyden2006}
     
     Experimental results show conversion efficiencies in the range of:
     \begin{itemize}
-        \item 0.01\% by forcing water through porous glass with pore sizes from 10--16\thinspace$\mu m$.\cite{Yang2003}
-        \item 0.8\% by forcing pure water through a ceramic rod populated with 6\thinspace$\mu m$ pores. \cite{Yang2004}
-        \item 3\% by forcing sodium chloride solution through a 75\thinspace$nm$ by 50\thinspace$\mu m$ silica channel. \cite{Heyden2007}
-        \item 0.77\% by forcing sodium chloride through a 200\thinspace$nm$ pore in an alumina membrane. \cite{Lu2006}
-        \item 5\% by forcing sodium chloride solution through a 0.5\thinspace$nm$ cylindrical pore in polyethylene terephalate foil. \cite{Xie2008}
+        \item 0.01\% by forcing water through porous glass with pore sizes from 10\thinspace--\SI{16}{\micro\metre}.\cite{Yang2003}
+        \item 0.8\% by forcing pure water through a ceramic rod populated with \SI{6}{\micro\metre} pores. \cite{Yang2004}
+        \item 3\% by forcing sodium chloride solution through a \SI{75}{\nano\metre} by \SI{50}{\micro\metre} silica channel. \cite{Heyden2007}
+        \item 0.77\% by forcing sodium chloride through a \SI{200}{\nano\metre} pore in an alumina membrane. \cite{Lu2006}
+        \item 5\% by forcing sodium chloride solution through a \SI{0.5}{\nano\metre} cylindrical pore in polyethylene terephalate foil. \cite{Xie2008}
     \end{itemize}
 
     Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\%. \cite{Davidson2008a, Ren2008a}
@@ -69,12 +71,26 @@
     This consumption profile will be used as the basis for estimating the amount of energy available to the harvester.
     Section \ref{sect:powerRequirements} determines the amount of energy an electronic meter would need to be useful.
     Following on this, section \ref{sect:harvesterSize} presents the required dimensions a usable harvester would need.
-    And finally, we discuss the findings in the conclusion.
+    Finally we discuss the feasibility of using  in the conclusion.
 
+    \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
+    In \cite{Gu2000}, the authors use a relatively simple parallel plate design to generate streaming potentials.
+    Sandwiching plastic shims between plates of glass provided a simple way set the channel height.
+    Using this technique, the authors of \cite{Gu2000} fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
+    Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
 
+    We replicated the channel fabrication method and approximate dimensions to produce ten streaming cell channels found in \cite{Gu2000}.
+    The channel height of our fabricated cells range from \SI{25}{\micro\metre} to \SI{250}{\micro\metre}.
+    The channels have a length of \SI{3}{\centi\metre} and an internal width of \SI{1}{\centi\metre}.
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{Photo_streamingPotential_Assembly_Step3.JPG}
+        \end{center}
+        \caption{One of ten constructed streaming cells mounted in an acrylic holder. Copper wires have been epoxied into each side to provide a means of measuring the developed potential across the cell. The shim is visible as the two orange strips at each side of the cell.}
+        \label{fig:cell}
+    \end{figure}
+    A photo of one of the cells is shown in Fig. \ref{fig:cell}.
 
-    \section{Readily Attainable Streaming Cell Power}
-    \label{sect:streamingCell}
     \section{Estimation of Typical Household Water Consumption}
     \label{sect:waterConsumption}
     \section{Estimation of Power Requirements}

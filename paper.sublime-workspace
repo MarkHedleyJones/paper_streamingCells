@@ -1,0 +1,444 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"is",
+				"is_playing"
+			],
+			[
+				"bu",
+				"buffersize"
+			],
+			[
+				"buff",
+				"buffer_offset"
+			],
+			[
+				"buf",
+				"bufferdata"
+			],
+			[
+				"st",
+				"stoptime"
+			],
+			[
+				"is_",
+				"is_playing"
+			],
+			[
+				"f",
+				"frequency"
+			],
+			[
+				"best_",
+				"best_candidates"
+			],
+			[
+				"red",
+				"reduced2"
+			],
+			[
+				"be",
+				"best_candidate"
+			],
+			[
+				"hot",
+				"hot_cell"
+			],
+			[
+				"ran",
+				"random"
+			],
+			[
+				"cna",
+				"candidates"
+			],
+			[
+				"bes",
+				"best_candidates"
+			],
+			[
+				"can",
+				"candidate"
+			],
+			[
+				"max",
+				"max_score"
+			],
+			[
+				"ma",
+				"max_score"
+			],
+			[
+				"c",
+				"candidate"
+			],
+			[
+				"candida",
+				"candidate"
+			],
+			[
+				"pos",
+				"possibility"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "\\documentclass[10pt,final,journal]{IEEEtran}\n\\usepackage{amsfonts}\n\\usepackage{amssymb}\n\\usepackage{graphicx}\n\\usepackage{siunitx}\n\\title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}\n\n\\author{Mark~H.~Jones, and Prof.~Jonathan~Scott}\n\n\\begin{document}\n    \\maketitle\n\n    \\begin{abstract}\n        We investigate the possibility of using streaming cells as a means of harvesting energy from potable water.\n        We fabricate a number of crude streaming potential cells, each with differing geometry.\n        We measure the electrical power developed from each of these cells over a range of pressure differentials.\n        We estimate the amount of energy required to operate a simple data logger and a typical domestic water flow profile.\n        Based on this data we calculate the size of a streaming cell harvester required to log domestic water consumption.\n    \\end{abstract}\n\n    \\section{Introduction}\n    Domestic and commercial water metering is becoming increasingly important throughout the world as water.\n    There are two methods available to water utility companies when recording the volume of water delivered to consumers.\n    \\begin{enumerate}\n        \\item \\emph{Mechanical readout:}\n            This involves having a human sight the meter's readout from time to time.\n            Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.\n        \\item \\emph{Electronic telemetry:}\n            Wireless data transmission commonly used as the method of data transport.\n            Due to the location of water metering, electrical power is provided by long life batteries.\n            These batteries are usually non-rechargeable and therefore must be replaced once exhausted.\n        \\end{enumerate}\n    Having a cheap and reliable way to retrieve metering information is the most important factor for utility companies.\n    The methods previously mentioned are costly to the utility as they require periodic human intervention.\n    The possibility of harvesting energy at the meter will allow periodic data transmission with less maintenance.\n    Removing batteries from electrical meters also reduces unwanted electrical waste.\n\n    Streaming cells are commonly used in membrane science to determine the zeta potential of a membrane surface.\n    This is an important factor in the design and operation of membrane based processes.\\cite{Daiguji2004b}\n    A streaming cell contains one or more narrow channels (sometimes a porous material is used as the channel) across which a pressure gradient is applied.\n    The application of a pressure gradient across the cell forces fluid through the cell and causes a streaming current, which in turn, creates voltage differential across the cell.\n    This voltage differential is called the streaming potential.\n\n    Streaming currents have been heavily investigated as a means of generating electrical energy from pressure gradients.\n    \\cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}\n    Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\\% for pure water and 7\\% for sodium chloride.\n    \\cite{VanderHeyden2006}\n    \n    Experimental results show conversion efficiencies in the range of:\n    \\begin{itemize}\n        \\item 0.01\\% by forcing water through porous glass with pore sizes from 10\\thinspace--\\SI{16}{\\micro\\metre}.\\cite{Yang2003}\n        \\item 0.8\\% by forcing pure water through a ceramic rod populated with \\SI{6}{\\micro\\metre} pores. \\cite{Yang2004}\n        \\item 3\\% by forcing sodium chloride solution through a \\SI{75}{\\nano\\metre} by \\SI{50}{\\micro\\metre} silica channel. \\cite{Heyden2007}\n        \\item 0.77\\% by forcing sodium chloride through a \\SI{200}{\\nano\\metre} pore in an alumina membrane. \\cite{Lu2006}\n        \\item 5\\% by forcing sodium chloride solution through a \\SI{0.5}{\\nano\\metre} cylindrical pore in polyethylene terephalate foil. \\cite{Xie2008}\n    \\end{itemize}\n\n    Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\\%. \\cite{Davidson2008a, Ren2008a}\n    However, experimental results utilising slip enhanced channels have not yet been reported in the literature.\n    In \\cite{Joly2006} it is suggested that a polarised hydrophobic surface would strongly enhance electro-osmotic effects and therefore further increase conversion efficiency.\n    Hydrophobic channels have not been considered due to the exotic materials required to build them.\n\n    We address the question of whether it is feasible to build a harvester using currently available materials.\n    Such a harvester must produce enough energy to operate a microprocessor and radio communication device.\n    It must collect all of its energy from a domestic water supply and be reliable.\n\n    The remainder of this work is presented as follows.\n    In section \\ref{sect:streamingCell} we build and measure a simple streaming potential cell.\n    We confirm the relationship between pressure and applied pressure and investigate the effect of channel height.\n    In section \\ref{sect:waterConsumption} we estimate a typical domestic water usage profile.\n    This consumption profile will be used as the basis for estimating the amount of energy available to the harvester.\n    Section \\ref{sect:powerRequirements} determines the amount of energy an electronic meter would need to be useful.\n    Following on this, section \\ref{sect:harvesterSize} presents the required dimensions a usable harvester would need.\n    Finally we discuss the feasibility of using  in the conclusion.\n\n    \\section{Readily Attainable Streaming Cell Power} \\label{sect:streamingCell}\n    In \\cite{Gu2000}, the authors use a relatively simple parallel plate design to generate streaming potentials.\n    Sandwiching plastic shims between plates of glass provided a simple way set the channel height.\n    Using this technique, the authors of \\cite{Gu2000} fabricated three cells with channel heights of \\SI{50}{\\micro\\metre}, \\SI{100}{\\micro\\metre} and \\SI{150}{\\micro\\metre}.\n    Each of the channels were \\SI{3}{\\centi\\metre} long and had a inner width of \\SI{1}{\\centi\\metre}.\n\n    We replicated the channel fabrication method and approximate dimensions to produce ten streaming cell channels.\n    These channels range in height from \\SI{25}{\\micro\\metre} to \\SI{250}{\\micro\\metre}.\n    The channels \n\n\n    \\section{Estimation of Typical Household Water Consumption}\n    \\label{sect:waterConsumption}\n    \\section{Estimation of Power Requirements}\n    \\label{sect:powerRequirements}\n    \\section{Estimation of Streaming Cell Harvester}\n    \\label{sect:harvesterSize}\n    \\section{Conclusion}\n    \\bibliographystyle{plain}\n    \\bibliography{library} \n\n\\end{document}\n",
+			"file": "paper.tex",
+			"file_size": 6930,
+			"file_write_time": 130512537681229553,
+			"settings":
+			{
+				"buffer_size": 6948,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
+			"settings":
+			{
+				"buffer_size": 4057,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
+			"settings":
+			{
+				"buffer_size": 1869,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 98.0,
+		"selected_items":
+		[
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"latex",
+				"LaTeXTools: Reconfigure and migrate settings"
+			]
+		],
+		"width": 435.0
+	},
+	"console":
+	{
+		"height": 146.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://sublime.wbond.net/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": false,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/mark/repos/thesis/configuration.tex",
+		"/home/mark/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mark/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
+		"/home/mark/.config/sublime-text-3/Packages/LaTeXTools/Default (Linux).sublime-keymap",
+		"/home/mark/.config/sublime-text-3/Packages/LaTeXTools/README.markdown",
+		"/home/mark/Dropbox/Personal/Weight/weightTable.tex",
+		"/home/mark/Dropbox/Personal/Weight/generateGraph.py",
+		"/home/mark/repos/robotgame/run.txt",
+		"/home/mark/Dropbox/Personal/Weight/exerciseLedgend.md",
+		"/home/mark/.config/dmenu-extended/config/dmenuExtended_preferences.json",
+		"/home/mark/Dropbox/Projects/Programming/alsa_generateTones.py",
+		"/home/mark/Downloads/groovesalad130.pls",
+		"/home/mark/Dropbox/Projects/Programming/alsa_generateTones_orig.py",
+		"/home/mark/Dropbox/Projects/Programming/alsa_generateTones_noCallback.py",
+		"/home/mark/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mark/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mark/repos/thesis/thesis.tex",
+		"/run/media/mark/Marcus/aa",
+		"/home/mark/.cache/.fr-72eCvw/e1000e-3.1.0.2/README",
+		"/home/mark/.cache/.fr-Wf4KmT/gedit-latex-3.8.0/README",
+		"/home/mark/.config/dmenu-extended/configuration.conf",
+		"/home/mark/.config/dmenu-extended/user_preferences.conf",
+		"/home/mark/.config/sxhkd/sxhkdrc",
+		"/home/mark/bin/dzen_launch.sh",
+		"/home/mark/.config/epiphany/user-stylesheet.css"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"view",
+			"compi",
+			"comp",
+			"build",
+			"^\\#.*$",
+			"shift+b",
+			"))",
+			"RATE",
+			"CHUNK",
+			"TS",
+			"PF",
+			"PC",
+			"PO",
+			"NF32",
+			"TT",
+			"NS",
+			"NA",
+			"MP",
+			"NP",
+			"Trace",
+			"(9, 7)$",
+			"(9, 7)",
+			" running turn ",
+			"--------------------------- running turn ",
+			"turn 17",
+			"random.",
+			"ruled",
+			"-",
+			".py ",
+			"test-",
+			"test",
+			"e1000 "
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": true,
+		"replace_history":
+		[
+			"",
+			"rate",
+			"chunk",
+			"time.sleep",
+			"pyaudio.paFloat32",
+			"pyaudio.paContinue",
+			"p.open",
+			"numpy.float32",
+			"time.time",
+			"numpy.sin",
+			"numpy.arange",
+			"math.py",
+			",",
+			"",
+			"\\ntest"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "paper.tex",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6948,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								6582,
+								6582
+							]
+						],
+						"settings":
+						{
+							"spell_check": true,
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 918.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4057,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1869,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.exec":
+	{
+		"height": 182.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "paper.sublime-project",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
