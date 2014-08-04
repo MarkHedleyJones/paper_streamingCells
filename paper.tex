@@ -3,6 +3,8 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{siunitx}
+\usepackage[usenames, dvipsnames]{color}
+
 \title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}
 
 \author{Mark~H.~Jones, and Prof.~Jonathan~Scott}
@@ -19,7 +21,7 @@
     \end{abstract}
 
     \section{Introduction}
-    Domestic and commercial water metering is becoming increasingly important throughout the world as water.
+    Domestic and commercial water metering is becoming increasingly important throughout the world.
     There are two methods available to water utility companies when recording the volume of water delivered to consumers.
     \begin{enumerate}
         \item \emph{Mechanical readout:}
@@ -30,10 +32,35 @@
             Due to the location of water metering, electrical power is provided by long life batteries.
             These batteries are usually non-rechargeable and therefore must be replaced once exhausted.
         \end{enumerate}
+    {[\color{blue}Suggested adding references to the above items. Not really sure what I would be adding - a specific example would be good]}
     Having a cheap and reliable way to retrieve metering information is the most important factor for utility companies.
     The methods previously mentioned are costly to the utility as they require periodic human intervention.
     The possibility of harvesting energy at the meter will allow periodic data transmission with less maintenance.
     Removing batteries from electrical meters also reduces unwanted electrical waste.
+
+    Streaming cells provide a way of converting fluid pressure/flow into electrical voltage/current.
+    When fluid comes into contact with a solid phase it is common for a difference in electrical potential to exist at the interface between the two phases.
+    This difference leads to ions in the fluid phase, those of opposite polarity to the net polarity of the solid phase (termed counter-ions), being attracted to the liquid-solid interface.
+    These counter-ions collect at the interface boundary in two layers; the Stern layer and the diffuse layer.
+    The Stern layer is comprised of immobilised counter-ions situated very close the charged solid surface. \cite{Salieb-Beugelaar2009}
+    The diffuse layer is formed by the ions attracted to the surface, but not so tightly as to be immobile.
+    A streaming cell makes use of these collected ions by forcing them through one or more narrow channels.
+    
+
+
+    It is important that the channel's dimensions are such that the interior of the channel is occupied prodomonantly by counter-ions.
+
+
+
+    A streaming cell is formed by creating a channel through a solid object.
+    For the cell to be effective, the dimensions of the channel are in the order of the thickness of the formed double layer.
+
+
+
+
+
+    They are routinely used in membrane science to measure the electrical properties of of membrane based processes. \cite{Daiguji2004b}
+    {\color{blue} Suggested saying something about a body of literature relating to streaming cells - unsure of the context or relevance of that suggestion}
 
     Streaming cells are commonly used in membrane science to determine the zeta potential of a membrane surface.
     This is an important factor in the design and operation of membrane based processes.\cite{Daiguji2004b}
@@ -45,10 +72,10 @@
     \cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}
     Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\% for pure water and 7\% for sodium chloride.
     \cite{VanderHeyden2006}
-    
+
     Experimental results show conversion efficiencies in the range of:
     \begin{itemize}
-        \item 0.01\% by forcing water through porous glass with pore sizes from 10\thinspace--\SI{16}{\micro\metre}.\cite{Yang2003}
+        \item 0.01\% by forcing water through porous glass with pore sizes from 10\thinspace--\SI{16}{\micro\metre}. \cite{Yang2003}
         \item 0.8\% by forcing pure water through a ceramic rod populated with \SI{6}{\micro\metre} pores. \cite{Yang2004}
         \item 3\% by forcing sodium chloride solution through a \SI{75}{\nano\metre} by \SI{50}{\micro\metre} silica channel. \cite{Heyden2007}
         \item 0.77\% by forcing sodium chloride through a \SI{200}{\nano\metre} pore in an alumina membrane. \cite{Lu2006}
@@ -71,7 +98,7 @@
     This consumption profile will be used as the basis for estimating the amount of energy available to the harvester.
     Section \ref{sect:powerRequirements} determines the amount of energy an electronic meter would need to be useful.
     Following on this, section \ref{sect:harvesterSize} presents the required dimensions a usable harvester would need.
-    Finally we discuss the feasibility of using  in the conclusion.
+    Finally we discuss the feasibility of using in the conclusion.
 
     \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
     In \cite{Gu2000}, the authors use a relatively simple parallel plate design to generate streaming potentials.
@@ -99,6 +126,6 @@
     \label{sect:harvesterSize}
     \section{Conclusion}
     \bibliographystyle{plain}
-    \bibliography{library} 
+    \bibliography{library}
 
 \end{document}
