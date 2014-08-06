@@ -23,11 +23,11 @@
 
     \section{Introduction}
     Domestic and commercial water metering is becoming increasingly important throughout the world.
-    Having a cheap and reliable way to retrieve metering information is the most important factor for utility companies.
+    Having a cheap and reliable way to retrieve metering information is an important consideration for utility companies.
     There are two methods available to water utility companies when recording the volume of water delivered to consumers.
     \begin{enumerate}
         \item \emph{Mechanical readout:}
-            This involves having a meter-reader sight each meter's readout from time to time.
+            Involves a meter-reader visually sighting the meter's readout from time to time.
             Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.
         \item \emph{Electronic telemetry:}
             Wireless data transmission is increasingly becoming used as a method of metering data recovery.
@@ -36,6 +36,7 @@
         \end{enumerate}
     {\color{blue}[Suggested adding references to the above items. Not really sure what I would be adding - a specific example would be good]}
     The methods previously mentioned are costly to the utility as they require periodic human intervention.
+    Even in the case of wireless data transmission, batteries
     The possibility of harvesting energy at the meter will allow periodic data transmission with less maintenance.
     Removing batteries from electrical meters also reduces unwanted electrical waste.
 
@@ -95,9 +96,6 @@
     Using that method, the authors of~\cite{Gu2000} fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
     Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
 
-    We replicated the channel fabrication method and approximate dimensions to produce ten streaming cell channels found in~\cite{Gu2000}.
-    The channel height of our fabricated cells range from \SI{25}{\micro\metre} to \SI{250}{\micro\metre}.
-    Our channels have a length of \SI{3}{\centi\metre} and an internal width of \SI{1}{\centi\metre}, as in~\cite{Gu2000}.
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{Photo_streamingPotential_Assembly_Step3.JPG}
@@ -105,7 +103,27 @@
         \caption{One of ten constructed streaming cells mounted in an acrylic holder. Copper wires have been epoxied into each side to provide a means of measuring the developed potential across the cell. The shim is visible as the two orange strips at each side of the cell.}
         \label{fig:cell}
     \end{figure}
+
+    We replicate the fabrication method and approximate dimensions of \cite{Gu2000} to produce ten streaming cell channels.
+    The internal dimensions of which are \SI{3}{\centi\metre} long, \SI{1}{\centi\metre} wide and heights in the range of \SI{25}{\micro\metre} to \SI{250}{\micro\metre}.
+    These dimensions are directly comparable to those of \cite{Gu2000}, where the length and width are the same but the heights span a wider range.
+    The channels themselves are made from glass microscope slides (Sail Brand - JIA 7101WT) which are sectioned into halves.
+    Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to create the channels.
+    The dimensions at each end of each channel have been measured under a microscope to determine the actual channel height.
+
+    Each channel is epoxied between two acrylic reservoirs and a base plate.
+    This provides a rigid structure under pressure and provides connection of wires and hoses.
+    Copper wires and silicon hoses are inserted into each reservoir to facilitate streaming potential measurement and f:w
+
     A photo of one of the cells is shown in Fig. \ref{fig:cell}.
+
+
+    \begin{tabular}{|c|c|c|} \hline
+    Microscope slides & Sail Brand & JIA 7101WT - 26 x 76mm\tabularnewline \hline
+    Shims & Garlock & Colorplast - 50$\,\mu$m, 80$\,\mu$m, 120$\,\mu$m and 250$\,\mu$m\tabularnewline \hline
+    Epoxy & Selleys & Araldite - Ultra Clear Resin\tabularnewline \hline
+    Pressure Sensor & Honeywell & 24PC15SMT - 0 -- $\pm$15 PSI\tabularnewline \hline
+    \end{tabular}
 
 
     \section{Estimation of Typical Household Water Consumption}:
