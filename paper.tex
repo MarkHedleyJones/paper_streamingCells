@@ -47,13 +47,15 @@
     A double layer can be broken into two sub-layers; the Stern and diffuse layers.
     The Stern layer is comprised of immobilised ions situated very close the charged solid surface.~\cite{Salieb-Beugelaar2009}
     The diffuse layer is formed by the ions attracted to the surface, but not so strongly as to be immobile.
-
     A streaming cell makes use of ions at the interface by forcing them through one or more narrow channels.
-    The channels can be formed from porous materials or created individually by various fabrication methods, e.g. chemical etching.
-    By immersing a channel in an electrolyte solution, double layers line the interior to the channel.
-    The thickness of the double layer is represented by the Debye length ($l_{D}$) and is controlled the ionic concentration of the liquid.~\cite{Israelachvili2011}
-    When the dimensions of a channel become small enough the double layers begin to overlap and co-ions are repelled from the channel.
 
+    The channels can be formed en-mass from using porous materials or created individually using a range fabrication methods, e.g. chemical etching.
+    When using glass as the channel material, the surface spontaneously develops a negative surface charge when it comes in contact with water.
+    This negative charge is caused by deprotonation at the wall from SiOH~$\leftrightarrows$~SiO$^{-}+$~H$^{+}$.
+    By immersing a channel in an electrolyte solution, double layers line the interior to the channel.
+    The thickness of this layer is defined by the Debye length ($l_{D}$) and is controlled the ionic concentration of the liquid.~\cite{Israelachvili2011}
+
+    When the dimensions of a channel become small enough the double layers begin to overlap and co-ions are repelled from the channel.
     Counter-ions within a streaming cell are collected by applying a pressure gradient across the channel/cell.
     Pressure forces the liquid through the channel (from which co-ions have been removed) creating a streaming current.
     It is the streaming current that raises the voltage (streaming potential) across the cell as the ions are pumped through it.
@@ -69,6 +71,8 @@
         \item 0.77\% by forcing sodium chloride through a \SI{200}{\nano\metre} pore in an alumina membrane.~\cite{Lu2006}
         \item 5\% by forcing sodium chloride solution through a \SI{0.5}{\nano\metre} cylindrical pore in polyethylene terephalate foil.~\cite{Xie2008}
     \end{itemize}
+    These results indicate that solutions containing salt are more efficient as a working liquid.
+    And as predicted by the authors of \cite{VanderHeyden2006}, the maximum efficiency is found when the salt concentration is low.
 
     It is clear from the literature that there is significant progress to be made with respect to increasing the conversion efficiency.
     Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\%.~\cite{Davidson2008a, Ren2008a}
@@ -88,7 +92,8 @@
     This consumption profile will be used as the basis for estimating the amount of energy available to the harvester.
     Section \ref{sect:powerRequirements} determines the amount of energy an electronic meter would need to be useful.
     Following on this, section \ref{sect:harvesterSize} presents the required dimensions a usable harvester would need.
-    Finally we discuss the feasibility of using in the conclusion.
+    In section \ref{sect:results} we present the results of our measurements and quantify our predictions.
+    And finally, we discuss the feasibility of the streaming cell harvester in the conclusion.
 
     \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
     In~\cite{Gu2000}, the authors employ a relatively simple parallel plate design to create a streaming cell.
@@ -113,25 +118,34 @@
 
     Each channel is epoxied between two acrylic reservoirs and a base plate.
     This provides a rigid structure under pressure and provides connection of wires and hoses.
-    Copper wires and silicon hoses are inserted into each reservoir to facilitate streaming potential measurement and f:w
-
+    Copper wires and silicon hoses are inserted into each reservoir to facilitate voltage measurement and the application of pressure.
     A photo of one of the cells is shown in Fig. \ref{fig:cell}.
-
-
-    \begin{tabular}{|c|c|c|} \hline
-    Microscope slides & Sail Brand & JIA 7101WT - 26 x 76mm\tabularnewline \hline
-    Shims & Garlock & Colorplast - 50$\,\mu$m, 80$\,\mu$m, 120$\,\mu$m and 250$\,\mu$m\tabularnewline \hline
-    Epoxy & Selleys & Araldite - Ultra Clear Resin\tabularnewline \hline
-    Pressure Sensor & Honeywell & 24PC15SMT - 0 -- $\pm$15 PSI\tabularnewline \hline
-    \end{tabular}
+    
+    Pressure is applied across each cell by connecting one end to a tap and leaving the other open to atmosphere.
+    A Honeywell pressure sensor (model 26PC15SMT) is connected across the input/output tubes to measure the developed pressure differential.
+    An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
 
 
     \section{Estimation of Typical Household Water Consumption}:
     \label{sect:waterConsumption}
+    In \cite{Heinrich2007} the author monitors the water consumption of twelve homes throughout the Kapiti Coast, New Zealand over a period of eight months.
+    From that study the following metrics were found:
+    \begin{itemize}
+    \item Toilet
+    \item Washing Machine
+    \item Bath
+    \item Taps
+    \end{itemize}
+    
+
     \section{Estimation of Power Requirements}
     \label{sect:powerRequirements}
     \section{Estimation of Streaming Cell Harvester}
     \label{sect:harvesterSize}
+
+    \section{Results}
+    \label{sect:results}
+
     \section{Conclusion}
     \bibliographystyle{plain}
     \bibliography{library}

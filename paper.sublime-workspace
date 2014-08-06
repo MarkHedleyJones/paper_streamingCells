@@ -88,29 +88,18 @@
 	"buffers":
 	[
 		{
-			"contents": "\\documentclass[10pt,final,journal]{IEEEtran}\n\\usepackage{amsfonts}\n\\usepackage{amssymb}\n\\usepackage{graphicx}\n\\usepackage{siunitx}\n\\title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}\n\n\\author{Mark~H.~Jones, and Prof.~Jonathan~Scott}\n\n\\begin{document}\n    \\maketitle\n\n    \\begin{abstract}\n        We investigate the possibility of using streaming cells as a means of harvesting energy from potable water.\n        We fabricate a number of crude streaming potential cells, each with differing geometry.\n        We measure the electrical power developed from each of these cells over a range of pressure differentials.\n        We estimate the amount of energy required to operate a simple data logger and a typical domestic water flow profile.\n        Based on this data we calculate the size of a streaming cell harvester required to log domestic water consumption.\n    \\end{abstract}\n\n    \\section{Introduction}\n    Domestic and commercial water metering is becoming increasingly important throughout the world as water.\n    There are two methods available to water utility companies when recording the volume of water delivered to consumers.\n    \\begin{enumerate}\n        \\item \\emph{Mechanical readout:}\n            This involves having a human sight the meter's readout from time to time.\n            Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.\n        \\item \\emph{Electronic telemetry:}\n            Wireless data transmission commonly used as the method of data transport.\n            Due to the location of water metering, electrical power is provided by long life batteries.\n            These batteries are usually non-rechargeable and therefore must be replaced once exhausted.\n        \\end{enumerate}\n    Having a cheap and reliable way to retrieve metering information is the most important factor for utility companies.\n    The methods previously mentioned are costly to the utility as they require periodic human intervention.\n    The possibility of harvesting energy at the meter will allow periodic data transmission with less maintenance.\n    Removing batteries from electrical meters also reduces unwanted electrical waste.\n\n    Streaming cells are commonly used in membrane science to determine the zeta potential of a membrane surface.\n    This is an important factor in the design and operation of membrane based processes.\\cite{Daiguji2004b}\n    A streaming cell contains one or more narrow channels (sometimes a porous material is used as the channel) across which a pressure gradient is applied.\n    The application of a pressure gradient across the cell forces fluid through the cell and causes a streaming current, which in turn, creates voltage differential across the cell.\n    This voltage differential is called the streaming potential.\n\n    Streaming currents have been heavily investigated as a means of generating electrical energy from pressure gradients.\n    \\cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}\n    Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\\% for pure water and 7\\% for sodium chloride.\n    \\cite{VanderHeyden2006}\n    \n    Experimental results show conversion efficiencies in the range of:\n    \\begin{itemize}\n        \\item 0.01\\% by forcing water through porous glass with pore sizes from 10\\thinspace--\\SI{16}{\\micro\\metre}.\\cite{Yang2003}\n        \\item 0.8\\% by forcing pure water through a ceramic rod populated with \\SI{6}{\\micro\\metre} pores. \\cite{Yang2004}\n        \\item 3\\% by forcing sodium chloride solution through a \\SI{75}{\\nano\\metre} by \\SI{50}{\\micro\\metre} silica channel. \\cite{Heyden2007}\n        \\item 0.77\\% by forcing sodium chloride through a \\SI{200}{\\nano\\metre} pore in an alumina membrane. \\cite{Lu2006}\n        \\item 5\\% by forcing sodium chloride solution through a \\SI{0.5}{\\nano\\metre} cylindrical pore in polyethylene terephalate foil. \\cite{Xie2008}\n    \\end{itemize}\n\n    Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\\%. \\cite{Davidson2008a, Ren2008a}\n    However, experimental results utilising slip enhanced channels have not yet been reported in the literature.\n    In \\cite{Joly2006} it is suggested that a polarised hydrophobic surface would strongly enhance electro-osmotic effects and therefore further increase conversion efficiency.\n    Hydrophobic channels have not been considered due to the exotic materials required to build them.\n\n    We address the question of whether it is feasible to build a harvester using currently available materials.\n    Such a harvester must produce enough energy to operate a microprocessor and radio communication device.\n    It must collect all of its energy from a domestic water supply and be reliable.\n\n    The remainder of this work is presented as follows.\n    In section \\ref{sect:streamingCell} we build and measure a simple streaming potential cell.\n    We confirm the relationship between pressure and applied pressure and investigate the effect of channel height.\n    In section \\ref{sect:waterConsumption} we estimate a typical domestic water usage profile.\n    This consumption profile will be used as the basis for estimating the amount of energy available to the harvester.\n    Section \\ref{sect:powerRequirements} determines the amount of energy an electronic meter would need to be useful.\n    Following on this, section \\ref{sect:harvesterSize} presents the required dimensions a usable harvester would need.\n    Finally we discuss the feasibility of using  in the conclusion.\n\n    \\section{Readily Attainable Streaming Cell Power} \\label{sect:streamingCell}\n    In \\cite{Gu2000}, the authors use a relatively simple parallel plate design to generate streaming potentials.\n    Sandwiching plastic shims between plates of glass provided a simple way set the channel height.\n    Using this technique, the authors of \\cite{Gu2000} fabricated three cells with channel heights of \\SI{50}{\\micro\\metre}, \\SI{100}{\\micro\\metre} and \\SI{150}{\\micro\\metre}.\n    Each of the channels were \\SI{3}{\\centi\\metre} long and had a inner width of \\SI{1}{\\centi\\metre}.\n\n    We replicated the channel fabrication method and approximate dimensions to produce ten streaming cell channels.\n    These channels range in height from \\SI{25}{\\micro\\metre} to \\SI{250}{\\micro\\metre}.\n    The channels \n\n\n    \\section{Estimation of Typical Household Water Consumption}\n    \\label{sect:waterConsumption}\n    \\section{Estimation of Power Requirements}\n    \\label{sect:powerRequirements}\n    \\section{Estimation of Streaming Cell Harvester}\n    \\label{sect:harvesterSize}\n    \\section{Conclusion}\n    \\bibliographystyle{plain}\n    \\bibliography{library} \n\n\\end{document}\n",
 			"file": "paper.tex",
-			"file_size": 6930,
-			"file_write_time": 130512537681229553,
 			"settings":
 			{
-				"buffer_size": 6948,
+				"buffer_size": 11168,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
+			"file": "/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Document.tex",
 			"settings":
 			{
-				"buffer_size": 4057,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
-			"settings":
-			{
-				"buffer_size": 1869,
+				"buffer_size": 5795,
 				"line_ending": "Unix"
 			}
 		}
@@ -118,7 +107,7 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 98.0,
+		"height": 54.0,
 		"selected_items":
 		[
 			[
@@ -126,12 +115,20 @@
 				"View: Toggle Menu"
 			],
 			[
-				"side",
-				"View: Toggle Side Bar"
-			],
-			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"mini",
+				"View: Toggle Minimap"
+			],
+			[
+				"wrap",
+				"Word Wrap: Toggle"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
 			],
 			[
 				"latex",
@@ -159,6 +156,12 @@
 	},
 	"file_history":
 	[
+		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
+		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
+		"/home/mark/repos/paper_interfaceModelScaling/paper.tex",
+		"/home/mark/Dropbox/University/PhD/Workbench/interfaceModel/src/optimise_resistorMesh.py",
+		"/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Things to show",
+		"/home/mark/repos/paper_streamingCells/README.md",
 		"/home/mark/repos/thesis/configuration.tex",
 		"/home/mark/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mark/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
@@ -187,7 +190,7 @@
 	],
 	"find":
 	{
-		"height": 26.0
+		"height": 36.0
 	},
 	"find_in_files":
 	{
@@ -201,6 +204,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"include",
 			"view",
 			"compi",
 			"comp",
@@ -265,7 +269,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -274,15 +278,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 6948,
+						"buffer_size": 11168,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								6582,
-								6582
+								2497,
+								2497
 							]
 						],
 						"settings":
@@ -290,37 +294,8 @@
 							"spell_check": true,
 							"syntax": "Packages/LaTeX/LaTeX.tmLanguage",
 							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 918.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 4057,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": true,
+							"word_wrap": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -330,28 +305,28 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
+					"buffer": 1,
+					"file": "/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Document.tex",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1869,
+						"buffer_size": 5795,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								2413,
+								2413
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Python/Python.tmLanguage"
+							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 576.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -390,7 +365,7 @@
 			1.0
 		]
 	},
-	"menu_visible": false,
+	"menu_visible": true,
 	"output.exec":
 	{
 		"height": 182.0
@@ -432,7 +407,7 @@
 	"settings":
 	{
 	},
-	"show_minimap": true,
+	"show_minimap": false,
 	"show_open_files": false,
 	"show_tabs": true,
 	"side_bar_visible": false,
