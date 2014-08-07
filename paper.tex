@@ -88,11 +88,13 @@
     The remainder of this work is presented as follows.
     In section \ref{sect:streamingCell} we build and measure a simple streaming potential cell.
     We confirm the relationship between pressure and applied pressure and investigate the effect of channel height.
-    In section \ref{sect:waterConsumption} we estimate a typical domestic water usage profile.
-    This consumption profile will be used as the basis for estimating the amount of energy available to the harvester.
-    Section \ref{sect:powerRequirements} determines the amount of energy an electronic meter would need to be useful.
-    Following on this, section \ref{sect:harvesterSize} presents the required dimensions a usable harvester would need.
+    In section \ref{sect:waterConsumption} we estimate the amount of harvestable energy from a constructed domestic water usage profile.
+    Section \ref{sect:powerRequirements} quantifies energy requirements of a simple electronic meter.
+    {\color{blue} next two sentences ignore.}
+    Following on this, section \ref{sect:harvesterSize} presents the required cell dimensions to  harvester capable of producing the requisite energy needs.
     In section \ref{sect:results} we present the results of our measurements and quantify our predictions.
+
+
     And finally, we discuss the feasibility of the streaming cell harvester in the conclusion.
 
     \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
@@ -114,7 +116,7 @@
     These dimensions are directly comparable to those of \cite{Gu2000}, where the length and width are the same but the heights span a wider range.
     The channels themselves are made from glass microscope slides (Sail Brand - JIA 7101WT) which are sectioned into halves.
     Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to create the channels.
-    The dimensions at each end of each channel have been measured under a microscope to determine the actual channel height.
+    The dimensions at each end of each channel are measured under a microscope to determine the actual channel height.
 
     Each channel is epoxied between two acrylic reservoirs and a base plate.
     This provides a rigid structure under pressure and provides connection of wires and hoses.
@@ -126,18 +128,26 @@
     An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
 
 
-    \section{Estimation of Typical Household Water Consumption}:
+    \section{Estimation of Harvestable Energy From A Typical New Zealand Dwelling}
     \label{sect:waterConsumption}
-    In \cite{Heinrich2007} the author monitors the water consumption of twelve homes throughout the Kapiti Coast, New Zealand over a period of eight months.
-    From that study the following metrics were found:
-    \begin{itemize}
-    \item Toilet
-    \item Washing Machine
-    \item Bath
-    \item Taps
-    \end{itemize}
-    
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_profile.pdf}
+        \end{center}
+        \caption{Sample profile showing constructed instances of washing machine use, a shower and a toilet flush.
+        Washing machine usage is broken into two parts corresponding to a wash and rinse cycle.}
+        \label{fig:profileSample}
+    \end{figure}
 
+    In \cite{Heinrich2008} the authors monitor water consumption of 51 homes throughout Auckland, New Zealand between February and September of 2008.
+    The report shows that the majority of domestic water is consumed by the shower (30\%), washing machine (27\%) and toilet (20\%).
+    Together these account for over three quarters of the indoor water usage in the average home.
+    We have created a flow profile from which to calculate the available harvestable energy using data from both \cite{Heinrich2008} and \cite{Heinrich2007}.
+    The profile fits the usage statistics of a home with two occupants according to the previously mentioned reports over the duration of a week.
+    The during that time five usages of a washing machine, fourteen showers and fifty six toilet flushes occur.
+    A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}
+
+    Informal investigation (Internet search) shows that a common brand of water meter in the Auckland region is the Kent
     \section{Estimation of Power Requirements}
     \label{sect:powerRequirements}
     \section{Estimation of Streaming Cell Harvester}

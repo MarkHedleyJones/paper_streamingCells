@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"ys_",
+				"ys_toilet"
+			],
+			[
 				"is",
 				"is_playing"
 			],
@@ -88,18 +92,30 @@
 	"buffers":
 	[
 		{
+			"contents": "\\documentclass[10pt,final,journal]{IEEEtran}\n\\usepackage{amsfonts}\n\\usepackage{amssymb}\n\\usepackage{graphicx}\n\\usepackage{siunitx}\n\\usepackage[usenames, dvipsnames]{color}\n\n\\title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}\n\n\\author{Mark~H.~Jones, and Prof.~Jonathan~Scott}\n\n\\begin{document}\n    \\maketitle\n\n    \\begin{abstract}\n        We investigate the possibility of using streaming cells as a means of harvesting energy from a town water supply.\n        We verify streaming cell measurements found in the literature and extend those measurements over a wider range of dimensions.\n        We measure the electrical power developed from ten streaming cells over a range of pressure differentials using town water.\n        We estimate the amount of energy required to operate a simple data logger and transmitter.\n        We estimate the amount of energy available from a typical domestic household based on water usage data.\n        Finally, we calculate the dimensions required to build a streaming cell harvester large enough to enable domestic water consumption logging and transmission.\n    \\end{abstract}\n\n    \\section{Introduction}\n    Domestic and commercial water metering is becoming increasingly important throughout the world.\n    Having a cheap and reliable way to retrieve metering information is an important consideration for utility companies.\n    There are two methods available to water utility companies when recording the volume of water delivered to consumers.\n    \\begin{enumerate}\n        \\item \\emph{Mechanical readout:}\n            Involves a meter-reader visually sighting the meter's readout from time to time.\n            Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.\n        \\item \\emph{Electronic telemetry:}\n            Wireless data transmission is increasingly becoming used as a method of metering data recovery.\n            Due to the location of water metering, electrical power must be provided by long life batteries.\n            These batteries are usually non-rechargeable and therefore must be replaced once exhausted.\n        \\end{enumerate}\n    {\\color{blue}[Suggested adding references to the above items. Not really sure what I would be adding - a specific example would be good]}\n    The methods previously mentioned are costly to the utility as they require periodic human intervention.\n    Even in the case of wireless data transmission, batteries\n    The possibility of harvesting energy at the meter will allow periodic data transmission with less maintenance.\n    Removing batteries from electrical meters also reduces unwanted electrical waste.\n\n    Streaming cells provide a way of converting fluid pressure/flow into electrical voltage/current.\n    Charged surfaces in contact with ionic solutions attract counter-ions\\footnote{The terms counter-ion and co-ion refer to ions of opposite and like charge relative to the polarity of the solid surface respectively.} while repelling co-ions so as to form a charged layer.~\\cite{Stein2004}\n    This charged layer is termed the double layer and is the key mechanism that enables streaming cell energy conversion.\n\n    A double layer can be broken into two sub-layers; the Stern and diffuse layers.\n    The Stern layer is comprised of immobilised ions situated very close the charged solid surface.~\\cite{Salieb-Beugelaar2009}\n    The diffuse layer is formed by the ions attracted to the surface, but not so strongly as to be immobile.\n    A streaming cell makes use of ions at the interface by forcing them through one or more narrow channels.\n\n    The channels can be formed en-mass from using porous materials or created individually using a range fabrication methods, e.g. chemical etching.\n    When using glass as the channel material, the surface spontaneously develops a negative surface charge when it comes in contact with water.\n    This negative charge is caused by deprotonation at the wall from SiOH~$\\leftrightarrows$~SiO$^{-}+$~H$^{+}$.\n    By immersing a channel in an electrolyte solution, double layers line the interior to the channel.\n    The thickness of this layer is defined by the Debye length ($l_{D}$) and is controlled the ionic concentration of the liquid.~\\cite{Israelachvili2011}\n\n    When the dimensions of a channel become small enough the double layers begin to overlap and co-ions are repelled from the channel.\n    Counter-ions within a streaming cell are collected by applying a pressure gradient across the channel/cell.\n    Pressure forces the liquid through the channel (from which co-ions have been removed) creating a streaming current.\n    It is the streaming current that raises the voltage (streaming potential) across the cell as the ions are pumped through it.\n\n    Streaming currents have been heavily investigated as a means of generating electrical energy from pressure gradients.~\\cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}\n    % It is expected that a channel height equal to twice the Debye length leads to maximum energy conversion efficiency.~\\cite{Daiguji2004b}\n    Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\\% for pure water and 7\\% for sodium chloride.~\\cite{VanderHeyden2006}\n    Experimental results show conversion efficiencies in the range of:\n    \\begin{itemize}\n        \\item 0.01\\% by forcing water through porous glass with pore sizes from 10\\thinspace--\\SI{16}{\\micro\\metre}.~\\cite{Yang2003}\n        \\item 0.8\\% by forcing pure water through a ceramic rod populated with \\SI{6}{\\micro\\metre} pores.~\\cite{Yang2004}\n        \\item 3\\% by forcing sodium chloride solution through a \\SI{75}{\\nano\\metre} by \\SI{50}{\\micro\\metre} silica channel.~\\cite{Heyden2007}\n        \\item 0.77\\% by forcing sodium chloride through a \\SI{200}{\\nano\\metre} pore in an alumina membrane.~\\cite{Lu2006}\n        \\item 5\\% by forcing sodium chloride solution through a \\SI{0.5}{\\nano\\metre} cylindrical pore in polyethylene terephalate foil.~\\cite{Xie2008}\n    \\end{itemize}\n    These results indicate that solutions containing salt are more efficient as a working liquid.\n    And as predicted by the authors of \\cite{VanderHeyden2006}, the maximum efficiency is found when the salt concentration is low.\n\n    It is clear from the literature that there is significant progress to be made with respect to increasing the conversion efficiency.\n    Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\\%.~\\cite{Davidson2008a, Ren2008a}\n    However, experimental results utilising slip enhanced channels have not yet been reported in the literature.\n    This type of enhancement would overcome the no-slip boundary condition at the solid-liquid interface of the cavity - where ionic concentration is at its highest.\n    In~\\cite{Joly2006} it is suggested that a polarised hydrophobic surface would strongly enhance electro-osmotic effects and therefore further increase conversion efficiency.\n    Hydrophobic channels have not been considered due to the exotic materials required to build them.\n\n    We address the question of whether it is feasible to build a harvester using readily available materials.\n    Such a harvester must produce enough energy to operate a microprocessor and radio communication device.\n    It must collect all of its energy from a domestic water supply and be reliable.\n\n    The remainder of this work is presented as follows.\n    In section \\ref{sect:streamingCell} we build and measure a simple streaming potential cell.\n    We confirm the relationship between pressure and applied pressure and investigate the effect of channel height.\n    In section \\ref{sect:waterConsumption} we estimate the amount of harvestable energy from a constructed domestic water usage profile.\n    Section \\ref{sect:powerRequirements} quantifies energy requirements of a simple electronic meter.\n    {\\color{blue} next two sentences ignore.}\n    Following on this, section \\ref{sect:harvesterSize} presents the required cell dimensions to  harvester capable of producing the requisite energy needs.\n    In section \\ref{sect:results} we present the results of our measurements and quantify our predictions.\n\n\n    And finally, we discuss the feasibility of the streaming cell harvester in the conclusion.\n\n    \\section{Readily Attainable Streaming Cell Power} \\label{sect:streamingCell}\n    In~\\cite{Gu2000}, the authors employ a relatively simple parallel plate design to create a streaming cell.\n    Sandwiching plastic shims between plates of glass provided a simple way to control channel height.\n    Using that method, the authors of~\\cite{Gu2000} fabricated three cells with channel heights of \\SI{50}{\\micro\\metre}, \\SI{100}{\\micro\\metre} and \\SI{150}{\\micro\\metre}.\n    Each of the channels were \\SI{3}{\\centi\\metre} long and had a inner width of \\SI{1}{\\centi\\metre}.\n\n    \\begin{figure}\n        \\begin{center}\n        \\includegraphics[width=\\linewidth]{Photo_streamingPotential_Assembly_Step3.JPG}\n        \\end{center}\n        \\caption{One of ten constructed streaming cells mounted in an acrylic holder. Copper wires have been epoxied into each side to provide a means of measuring the developed potential across the cell. The shim is visible as the two orange strips at each side of the cell.}\n        \\label{fig:cell}\n    \\end{figure}\n\n    We replicate the fabrication method and approximate dimensions of \\cite{Gu2000} to produce ten streaming cell channels.\n    The internal dimensions of which are \\SI{3}{\\centi\\metre} long, \\SI{1}{\\centi\\metre} wide and heights in the range of \\SI{25}{\\micro\\metre} to \\SI{250}{\\micro\\metre}.\n    These dimensions are directly comparable to those of \\cite{Gu2000}, where the length and width are the same but the heights span a wider range.\n    The channels themselves are made from glass microscope slides (Sail Brand - JIA 7101WT) which are sectioned into halves.\n    Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to create the channels.\n    The dimensions at each end of each channel are measured under a microscope to determine the actual channel height.\n\n    Each channel is epoxied between two acrylic reservoirs and a base plate.\n    This provides a rigid structure under pressure and provides connection of wires and hoses.\n    Copper wires and silicon hoses are inserted into each reservoir to facilitate voltage measurement and the application of pressure.\n    A photo of one of the cells is shown in Fig. \\ref{fig:cell}.\n    \n    Pressure is applied across each cell by connecting one end to a tap and leaving the other open to atmosphere.\n    A Honeywell pressure sensor (model 26PC15SMT) is connected across the input/output tubes to measure the developed pressure differential.\n    An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.\n\n\n    \\section{Estimation of Harvestable Energy From A Typical New Zealand Dwelling}\n    \\label{sect:waterConsumption}\n    \\begin{figure}\n        \\begin{center}\n        \\includegraphics[width=\\linewidth]{graph_profile.pdf}\n        \\end{center}\n        \\caption{Sample profile showing constructed instances of washing machine use, a shower and a toilet flush.\n        Washing machine usage is broken into two parts corresponding to a wash and rinse cycle.}\n        \\label{fig:profileSample}\n    \\end{figure}\n\n    In \\cite{Heinrich2008} the authors monitor water consumption of 51 homes throughout Auckland, New Zealand between February and September of 2008.\n    The report shows that the majority of domestic water is consumed by the shower (30\\%), washing machine (27\\%) and toilet (20\\%).\n    Together these account for over three quarters of the indoor water usage in the average home.\n    We have created a flow profile from which to calculate the available harvestable energy using data from both \\cite{Heinrich2008} and \\cite{Heinrich2007}.\n    The profile fits the usage statistics of a home with two occupants according to the previously mentioned reports over the duration of a week.\n    The during that time five usages of a washing machine, fourteen showers and fifty six toilet flushes occur.\n    A sample of the usage profiles of each item is shown in Fig. \\ref{fig:profileSample}\n\n    Informal investigation (Internet search) shows that a common brand of water meter in the Auckland region is the Kent\n    \\section{Estimation of Power Requirements}\n    \\label{sect:powerRequirements}\n    \\section{Estimation of Streaming Cell Harvester}\n    \\label{sect:harvesterSize}\n\n    \\section{Results}\n    \\label{sect:results}\n\n    \\section{Conclusion}\n    \\bibliographystyle{plain}\n    \\bibliography{library}\n\n\\end{document}\n",
 			"file": "paper.tex",
+			"file_size": 12862,
+			"file_write_time": 130518702644762070,
 			"settings":
 			{
-				"buffer_size": 11168,
+				"buffer_size": 12981,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Document.tex",
+			"file": "graphs.py",
 			"settings":
 			{
-				"buffer_size": 5795,
+				"buffer_size": 1943,
+				"line_ending": "Unix",
+				"name": "import matplotlib.pyplot as plt"
+			}
+		},
+		{
+			"file": "/home/mark/Dropbox/University/PhD/Workbench/electrodeInterface/lib/plot/formatter.py",
+			"settings":
+			{
+				"buffer_size": 8182,
 				"line_ending": "Unix"
 			}
 		}
@@ -107,12 +123,20 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 54.0,
+		"height": 274.0,
 		"selected_items":
 		[
 			[
+				":w",
+				":w - Save"
+			],
+			[
 				"menu",
 				"View: Toggle Menu"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
 			],
 			[
 				"install",
@@ -125,10 +149,6 @@
 			[
 				"wrap",
 				"Word Wrap: Toggle"
-			],
-			[
-				"side",
-				"View: Toggle Side Bar"
 			],
 			[
 				"latex",
@@ -156,6 +176,13 @@
 	},
 	"file_history":
 	[
+		"/home/mark/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mark/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/mark/Dropbox/University/PhD/Workbench/PlotLibrary/formatting.py",
+		"/home/mark/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Document.tex",
+		"/home/mark/repos/thesis/thesis.tex",
+		"/home/mark/repos/thesis/content/pt1/01-PowerHarvesting/chapter.tex",
 		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
 		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
 		"/home/mark/repos/paper_interfaceModelScaling/paper.tex",
@@ -163,7 +190,6 @@
 		"/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Things to show",
 		"/home/mark/repos/paper_streamingCells/README.md",
 		"/home/mark/repos/thesis/configuration.tex",
-		"/home/mark/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/mark/.config/sublime-text-3/Packages/User/LaTeXTools.sublime-settings",
 		"/home/mark/.config/sublime-text-3/Packages/LaTeXTools/Default (Linux).sublime-keymap",
 		"/home/mark/.config/sublime-text-3/Packages/LaTeXTools/README.markdown",
@@ -176,9 +202,6 @@
 		"/home/mark/Downloads/groovesalad130.pls",
 		"/home/mark/Dropbox/Projects/Programming/alsa_generateTones_orig.py",
 		"/home/mark/Dropbox/Projects/Programming/alsa_generateTones_noCallback.py",
-		"/home/mark/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
-		"/home/mark/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/mark/repos/thesis/thesis.tex",
 		"/run/media/mark/Marcus/aa",
 		"/home/mark/.cache/.fr-72eCvw/e1000e-3.1.0.2/README",
 		"/home/mark/.cache/.fr-Wf4KmT/gedit-latex-3.8.0/README",
@@ -204,6 +227,14 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"fig:profiles",
+			"have been",
+			"multi",
+			"print",
+			"additi",
+			"additionall ",
+			"F9",
+			"table",
 			"include",
 			"view",
 			"compi",
@@ -269,7 +300,7 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -278,15 +309,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 11168,
+						"buffer_size": 12981,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2497,
-								2497
+								12667,
+								12667
 							]
 						],
 						"settings":
@@ -298,6 +329,35 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
+						"translation.y": 606.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "graphs.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1943,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								325,
+								325
+							]
+						],
+						"settings":
+						{
+							"auto_name": "import matplotlib.pyplot as plt",
+							"syntax": "Packages/Python/Python.tmLanguage"
+						},
+						"translation.x": 0.0,
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
@@ -305,31 +365,33 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
-					"file": "/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Document.tex",
+					"buffer": 2,
+					"file": "/home/mark/Dropbox/University/PhD/Workbench/electrodeInterface/lib/plot/formatter.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 5795,
+						"buffer_size": 8182,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2413,
-								2413
+								0,
+								0
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/LaTeX/LaTeX.tmLanguage"
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 576.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 2,
 					"type": "text"
 				}
 			]
@@ -337,7 +399,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 26.0
+		"height": 36.0
 	},
 	"input":
 	{
@@ -365,10 +427,10 @@
 			1.0
 		]
 	},
-	"menu_visible": true,
+	"menu_visible": false,
 	"output.exec":
 	{
-		"height": 182.0
+		"height": 198.0
 	},
 	"output.find_results":
 	{
