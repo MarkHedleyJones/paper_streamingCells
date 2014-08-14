@@ -3,11 +3,11 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{siunitx}
-\usepackage[usenames, dvipsnames]{color}
+% \usepackage[dvipsnames]{color}
 
 \title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}
 
-\author{Mark~H.~Jones, and Prof.~Jonathan~Scott}
+\author{Mark~H.~Jones, and Jonathan~Scott}
 
 \begin{document}
     \maketitle
@@ -18,7 +18,8 @@
         We measure the electrical power developed from ten streaming cells over a range of pressure differentials using town water.
         We estimate the amount of energy required to operate a simple data logger and transmitter.
         We estimate the amount of energy available from a typical domestic household based on water usage data.
-        Finally, we calculate the dimensions required to build a streaming cell harvester large enough to enable domestic water consumption logging and transmission.
+        From these estimates we calculate minimum geometric dimensions required to deliver practical power output to a wireless water meter.
+        Finally, we comment on the feasibility of using streaming cell technology as a means of harvesting energy from a domestic water supply.
     \end{abstract}
 
     \section{Introduction}
@@ -31,14 +32,14 @@
             Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.
         \item \emph{Electronic telemetry:}
             Wireless data transmission is increasingly becoming used as a method of metering data recovery.
-            Due to the location of water metering, electrical power must be provided by long life batteries.
-            These batteries are usually non-rechargeable and therefore must be replaced once exhausted.
+            Due to the location of water metering, electrical power is usually provided by long life batteries.
         \end{enumerate}
-    {\color{blue}[Suggested adding references to the above items. Not really sure what I would be adding - a specific example would be good]}
-    The methods previously mentioned are costly to the utility as they require periodic human intervention.
-    Even in the case of wireless data transmission, batteries
-    The possibility of harvesting energy at the meter will allow periodic data transmission with less maintenance.
-    Removing batteries from electrical meters also reduces unwanted electrical waste.
+    Both methods involve costly human intervention on the part of the utility company.
+    Wireless telemetry offer savings by removing the need to employ meter readers; however, the batteries used are non-rechargeable and have a maximum life-span of 10 years.\cite{BMeters2014}
+    The possibility of harvesting energy at the meter allows frequent data reporting with less maintenance.
+
+    Frequent reporting of water usage enables providers to detect water leaks at consumers' properties.~\cite{Britton2013}
+    Removing the batteries from wireless telemetry systems reduces both the total cost of ownership and electrical waste.
 
     Streaming cells provide a way of converting fluid pressure/flow into electrical voltage/current.
     Charged surfaces in contact with ionic solutions attract counter-ions\footnote{The terms counter-ion and co-ion refer to ions of opposite and like charge relative to the polarity of the solid surface respectively.} while repelling co-ions so as to form a charged layer.~\cite{Stein2004}
@@ -122,7 +123,7 @@
     This provides a rigid structure under pressure and provides connection of wires and hoses.
     Copper wires and silicon hoses are inserted into each reservoir to facilitate voltage measurement and the application of pressure.
     A photo of one of the cells is shown in Fig. \ref{fig:cell}.
-    
+
     Pressure is applied across each cell by connecting one end to a tap and leaving the other open to atmosphere.
     A Honeywell pressure sensor (model 26PC15SMT) is connected across the input/output tubes to measure the developed pressure differential.
     An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
