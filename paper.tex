@@ -24,39 +24,42 @@
 
     \section{Introduction}
     Domestic and commercial water metering is becoming increasingly important throughout the world.
-    Having a cheap and reliable way to retrieve metering information is an important consideration for utility companies.
-    There are two methods available to water utility companies when recording the volume of water delivered to consumers.
+    Having a cheap and reliable way to retrieve metered data is an important consideration for utility companies.
+    There are two practical methods of retrieving data from domestic water meters:
     \begin{enumerate}
-        \item \emph{Mechanical readout:}
-            Involves a meter-reader visually sighting the meter's readout from time to time.
+        \item \emph{Visual inspection:}
+            Involves a meter-reader visually sighting the meter's mechanical readout from time to time.
             Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.
         \item \emph{Electronic telemetry:}
-            Wireless data transmission is increasingly becoming used as a method of metering data recovery.
-            Due to the location of water metering, electrical power is usually provided by long life batteries.
+            Automatic wireless transmission of data to the billing company.
+            Requires a power source at the site of metering, which is generally underground at a property's boundary.
         \end{enumerate}
-    Both methods involve costly human intervention on the part of the utility company.
-    Wireless telemetry offer savings by removing the need to employ meter readers; however, the batteries used are non-rechargeable and have a maximum life-span of 10 years.\cite{BMeters2014}
-    The possibility of harvesting energy at the meter allows frequent data reporting with less maintenance.
+    Due to the location of water metering, electrical power is usually provided by long life batteries.
+    The batteries used in automatic meter readers are non-rechargeable and have a maximum life-span of 10 years.\cite{BMeters2014}
+    Automatic meter reading enables utility companies to detect water leaks at consumers' properties.~\cite{Britton2013}
 
-    Frequent reporting of water usage enables providers to detect water leaks at consumers' properties.~\cite{Britton2013}
-    Removing the batteries from wireless telemetry systems reduces both the total cost of ownership and electrical waste.
+    The possibility of harvesting energy at the meter should allow frequent data reporting with less maintenance.
+    Removing the batteries from current meter reading systems should reduce both the total cost of ownership and electrical waste.
 
-    Streaming cells provide a way of converting fluid pressure/flow into electrical voltage/current.
-    Charged surfaces in contact with ionic solutions attract counter-ions\footnote{The terms counter-ion and co-ion refer to ions of opposite and like charge relative to the polarity of the solid surface respectively.} while repelling co-ions so as to form a charged layer.~\cite{Stein2004}
+    Streaming cells provide a way of converting fluid energy into electrical energy.
+    They work on the principle that charged surfaces in contact with ionic solutions attract counter-ions\footnote{The terms counter-ion and co-ion refer to ions of opposite and like charge relative to the polarity of the solid surface respectively.} so as to form a charged layer at the contact surface.~\cite{Stein2004}
     This charged layer is termed the double layer and is the key mechanism that enables streaming cell energy conversion.
+    It is possible to pump and collect ions from withing the double layer with the application of pressure.
 
-    A double layer can be broken into two sub-layers; the Stern and diffuse layers.
+    A double layer is called such because it is made of two inividual layers; the Stern and diffuse layers.
+    % A double layer can be broken into two sub-layers; the Stern and diffuse layers.
     The Stern layer is comprised of immobilised ions situated very close the charged solid surface.~\cite{Salieb-Beugelaar2009}
     The diffuse layer is formed by the ions attracted to the surface, but not so strongly as to be immobile.
-    A streaming cell makes use of ions at the interface by forcing them through one or more narrow channels.
+    A streaming cell moves ions in the diffuse layer through one or more narrow channels, concentrating them on the other side.
 
-    The channels can be formed en-mass from using porous materials or created individually using a range fabrication methods, e.g. chemical etching.
-    When using glass as the channel material, the surface spontaneously develops a negative surface charge when it comes in contact with water.
-    This negative charge is caused by deprotonation at the wall from SiOH~$\leftrightarrows$~SiO$^{-}+$~H$^{+}$.
-    By immersing a channel in an electrolyte solution, double layers line the interior to the channel.
+    Streaming cell channels can be created individually using a range fabrication methods, such as chemical etching or the use of narrowly separated parallel plates.
+    Channels can also be formed en-mass by using porous materials such as glass or ceramics as the cell where the pores themselves form channels.
+    When using glass, the surface spontaneously develops a negative surface charge when it comes in contact with water.
+    The charge is caused by deprotonation at the contact surface (SiOH~$\leftrightarrows$~SiO$^{-}+$~H$^{+}$).
+    By immersing a channel in an electrolyte solution double layers line the interior walls of the channel.
     The thickness of this layer is defined by the Debye length ($l_{D}$) and is controlled the ionic concentration of the liquid.~\cite{Israelachvili2011}
 
-    When the dimensions of a channel become small enough the double layers begin to overlap and co-ions are repelled from the channel.
+    When the dimensions of a channel become small the double layers begin to overlap and co-ions are repelled from the channel.
     Counter-ions within a streaming cell are collected by applying a pressure gradient across the channel/cell.
     Pressure forces the liquid through the channel (from which co-ions have been removed) creating a streaming current.
     It is the streaming current that raises the voltage (streaming potential) across the cell as the ions are pumped through it.
@@ -72,15 +75,16 @@
         \item 0.77\% by forcing sodium chloride through a \SI{200}{\nano\metre} pore in an alumina membrane.~\cite{Lu2006}
         \item 5\% by forcing sodium chloride solution through a \SI{0.5}{\nano\metre} cylindrical pore in polyethylene terephalate foil.~\cite{Xie2008}
     \end{itemize}
-    These results indicate that solutions containing salt are more efficient as a working liquid.
-    And as predicted by the authors of \cite{VanderHeyden2006}, the maximum efficiency is found when the salt concentration is low.
+    These results indicate that solutions containing salt are more efficient as a working liquid, however the maximum efficiency is found when the salt concentration is low.~\cite{VanderHeyden2006}
 
     It is clear from the literature that there is significant progress to be made with respect to increasing the conversion efficiency.
     Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\%.~\cite{Davidson2008a, Ren2008a}
-    However, experimental results utilising slip enhanced channels have not yet been reported in the literature.
-    This type of enhancement would overcome the no-slip boundary condition at the solid-liquid interface of the cavity - where ionic concentration is at its highest.
-    In~\cite{Joly2006} it is suggested that a polarised hydrophobic surface would strongly enhance electro-osmotic effects and therefore further increase conversion efficiency.
-    Hydrophobic channels have not been considered due to the exotic materials required to build them.
+    Experimental results utilising slip enhanced channels have not yet been reported in the literature.
+    This type of enhancement would overcome the `no-slip boundary condition' at the solid-liquid interface.
+    Slip at the interface boundary would mean that ions in the Stern layer, where ionic concentration is highest, could also be moved across the channel.
+    Surface enhanced channels are out of the scope of this study due to cost and manufacturing difficulty.
+
+    % In~\cite{Joly2006} it is suggested that a polarised hydrophobic surface would strongly enhance electro-osmotic effects and therefore further increase conversion efficiency
 
     We address the question of whether it is feasible to build a harvester using readily available materials.
     Such a harvester must produce enough energy to operate a microprocessor and radio communication device.
@@ -91,33 +95,30 @@
     We confirm the relationship between pressure and applied pressure and investigate the effect of channel height.
     In section \ref{sect:waterConsumption} we estimate the amount of harvestable energy from a constructed domestic water usage profile.
     Section \ref{sect:powerRequirements} quantifies energy requirements of a simple electronic meter.
-    {\color{blue} next two sentences ignore.}
-    Following on this, section \ref{sect:harvesterSize} presents the required cell dimensions to  harvester capable of producing the requisite energy needs.
-    In section \ref{sect:results} we present the results of our measurements and quantify our predictions.
-
-
-    And finally, we discuss the feasibility of the streaming cell harvester in the conclusion.
+    Following on this, section \ref{sect:harvesterSize} presents the required cell dimensions of a harvester capable of producing the requisite energy.
+    In section \ref{sect:results} we combine and present results of our measurements and quantify our predictions.
+    And finally, we conclude with a discussion on the feasibility of using streaming cells to harvest energy.
 
     \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
     In~\cite{Gu2000}, the authors employ a relatively simple parallel plate design to create a streaming cell.
-    Sandwiching plastic shims between plates of glass provided a simple way to control channel height.
-    Using that method, the authors of~\cite{Gu2000} fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
+    They glued plastic shims between parallel plates of glass, providing a simple way of controlling channel height.
+    Using that method, the authors fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
     Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
 
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{Photo_streamingPotential_Assembly_Step3.JPG}
         \end{center}
-        \caption{One of ten constructed streaming cells mounted in an acrylic holder. Copper wires have been epoxied into each side to provide a means of measuring the developed potential across the cell. The shim is visible as the two orange strips at each side of the cell.}
+        \caption{One of our ten constructed streaming cells mounted in an acrylic holder. Copper wires have been epoxied into each side to provide a means of measuring the developed potential across the cell. The plastic shims are visible as the orange strips at each side of the cell.}
         \label{fig:cell}
     \end{figure}
 
-    We replicate the fabrication method and approximate dimensions of \cite{Gu2000} to produce ten streaming cell channels.
+    We replicate the fabrication method and approximate dimensions of \cite{Gu2000} to produce ten streaming cells.
     The internal dimensions of which are \SI{3}{\centi\metre} long, \SI{1}{\centi\metre} wide and heights in the range of \SI{25}{\micro\metre} to \SI{250}{\micro\metre}.
     These dimensions are directly comparable to those of \cite{Gu2000}, where the length and width are the same but the heights span a wider range.
-    The channels themselves are made from glass microscope slides (Sail Brand - JIA 7101WT) which are sectioned into halves.
+    The channels themselves are made from glass microscope slides (Sail Brand - JIA 7101WT) sectioned into halves.
     Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to create the channels.
-    The dimensions at each end of each channel are measured under a microscope to determine the actual channel height.
+    The dimensions at each end of each channel are measured under a microscope to determine the actual channel height and ensure symmetry.
 
     Each channel is epoxied between two acrylic reservoirs and a base plate.
     This provides a rigid structure under pressure and provides connection of wires and hoses.
@@ -127,7 +128,6 @@
     Pressure is applied across each cell by connecting one end to a tap and leaving the other open to atmosphere.
     A Honeywell pressure sensor (model 26PC15SMT) is connected across the input/output tubes to measure the developed pressure differential.
     An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
-
 
     \section{Estimation of Harvestable Energy From A Typical New Zealand Dwelling}
     \label{sect:waterConsumption}
