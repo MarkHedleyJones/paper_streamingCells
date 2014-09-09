@@ -140,17 +140,48 @@
         \label{fig:profileSample}
     \end{figure}
 
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_pressureLoss.pdf}
+        \end{center}
+        \caption{Estimated head loss from a mechanical water meter typically installed in a domestic setting (Kent PSMT 25mm).}
+        \label{fig:headloss}
+    \end{figure}
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_harvest.pdf}
+        \end{center}
+        \caption{Calculated power dissipation by a typical domestic mechanical water meter (Kent PSMT 25mm) for each of the sample profile events.}
+        \label{fig:powerDissipated_meter}
+    \end{figure}
+
+
     In \cite{Heinrich2008} the authors monitor water consumption of 51 homes throughout Auckland, New Zealand between February and September of 2008.
     The report shows that the majority of domestic water is consumed by the shower (30\%), washing machine (27\%) and toilet (20\%).
     Together these account for over three quarters of the indoor water usage in the average home.
     We have created a flow profile from which to calculate the available harvestable energy using data from both \cite{Heinrich2008} and \cite{Heinrich2007}.
     The profile fits the usage statistics of a home with two occupants according to the previously mentioned reports over the duration of a week.
-    The during that time five usages of a washing machine, fourteen showers and fifty six toilet flushes occur.
-    A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}
+    The during that time five uses of a washing machine, fourteen showers and fifty six toilet flushes occur.
+    A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}.
 
-    Informal investigation (Internet search) shows that a common brand of water meter in the Auckland region is the Kent
+    The Kent PSMT 25mm is a water meter typically installed in homes around the Auckland district.~\cite{WatercareNewZealand2014}.
+    Figure~\ref{fig:headloss} shows the head loss curve that we have reconstructed based on product specifications for this meter.
+    From that curve, we calculate the amount of power dissipated by the Kent PSMT meter during the average washing machine cycle, shower, and toilet flush.
+    This data is presented as figure~\ref{fig:powerDissipated_meter}.
+    The total energy dissipated within the water meter for each of the water events is:
+    \begin{itemize}
+    \item \SI{32.8}{\kilo\joule} per load of washing,
+    \item \SI{13.3}{\kilo\joule} per shower, and
+    \item \SI{1.45}{\kilo\joule} per flush of the toilet.
+    \end{itemize}
+    % These figures are based on average duration and flow rates as found in \cite{Heinrich2008}, and the estimated head loss from Fig.~\ref{fig:headloss}.
+    Over a week, our reference water meter would dissipate a total of \SI{431}{\kilo\joule}, averaging \SI{61.6}{\kilo\joule} per day.
+    
     \section{Estimation of Power Requirements}
     \label{sect:powerRequirements}
+
+    
     \section{Estimation of Streaming Cell Harvester}
     \label{sect:harvesterSize}
 

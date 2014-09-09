@@ -119,3 +119,48 @@ plt.plot(xs_flow_min,list(map(flow_to_power, ys_shower)), label='Shower', linest
 plt.plot(xs_flow_min,list(map(flow_to_power, ys_toilet)), label='Toilet', linestyle=':')
 plt.legend(frameon=False, ncol=3)
 plt.savefig('graph_harvest.pdf', format='pdf')
+
+
+
+def pressure_loss_MPa(flow_m3_hour):
+    # Trend line obtained from fitting a 2-degree polynomial equation to
+    # points read of the pressure loss graphic.
+    # Flow is given in m^3/h and pressure is in MPa
+    return (0.00316*math.pow(flow_m3_hour,2) + 0.00331*flow_m3_hour + 0.00235)
+
+plt.clf()
+lib.plot.formatter.format(style='IEEE')    
+
+xs = list(np.linspace(0,5,100))
+ys = list(map(pressure_loss_MPa, xs))
+plt.clf()
+plt.gca().set_xlabel('Flow ($m^3/h$)')
+plt.gca().set_ylabel('Head Loss (MPa)')
+plt.grid()
+plt.plot(xs,ys)
+plt.savefig('graph_pressureLoss.pdf', format='pdf')
+
+
+# Pressure vs slope
+
+height_slope = [
+    (0.245, 0.0031649193),
+    (0.178, 0.0032297521),
+    (0.161, 0.0045257505),
+    (0.125, 0.0046819299),
+    (0.106, 0.0071909101),
+    (0.075, 0.0064584454),
+    (0.071, 0.0077858818),
+    (0.056, 0.0069451427),
+    (0.052, 0.0079515149),
+    (0.026, 0.0041040953)
+]
+
+height = map(lambda x: x[0] * 1000, height_slope)
+slope = map(lambda x: x[1] * 1000, height_slope)
+plt.clf()
+plt.gca().set_xlabel('Flow ($m^3/h$)')
+plt.gca().set_ylabel('Head Loss (MPa)')
+plt.grid()
+plt.plot(xs,ys)
+plt.savefig('graph_pressureLoss.pdf', format='pdf')
