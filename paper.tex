@@ -128,12 +128,35 @@
     Pressure is applied across each cell by connecting one end to a tap and leaving the other open to atmosphere.
     A Honeywell pressure sensor (model 26PC15SMT) is connected across the input/output tubes to measure the developed pressure differential.
     An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
+    The working fluid, being tap water, had a conductivity of \SI{1.87e-6}{\siemens\per\meter} as measured with an EDT Instruments RE 388Tx Conductivity Meter.
+
+    Measured data obtained from each of the ten streaming cells is presented in Fig.~\ref{fig:cellEfficiency}.
+    Here the ratio of streaming voltage to applied pressure is plotted as a function of the internal channel height.
+    It is clear from these measurements that narrower channels offer greater electrical conversion efficiency.
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_cellEfficiency}
+        \end{center}
+        \caption{Gradient of developed streaming voltage with applied pressure differential versus the channel height of ten fabricated streaming cells.
+        The most efficient cell has a channel height of \SI{52}{\micro\meter}.}
+        \label{fig:cellEfficiency}
+    \end{figure}
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_voltagePressure}
+        \end{center}
+        \caption{Measured voltage developed across the \SI{52}{\micro\meter} streaming cell as a function of the differential pressure across the cell.}
+        \label{fig:cellVoltagePressure}
+    \end{figure}
+
 
     \section{Estimation of Harvestable Energy From A Typical New Zealand Dwelling}
     \label{sect:waterConsumption}
     \begin{figure}
         \begin{center}
-        \includegraphics[width=\linewidth]{graph_profile.pdf}
+        \includegraphics[width=\linewidth]{graph_profile}
         \end{center}
         \caption{Sample profile showing constructed instances of washing machine use, a shower and a toilet flush.
         Washing machine usage is broken into two parts corresponding to a wash and rinse cycle.}
@@ -142,7 +165,7 @@
 
     \begin{figure}
         \begin{center}
-        \includegraphics[width=\linewidth]{graph_pressureLoss.pdf}
+        \includegraphics[width=\linewidth]{graph_pressureLoss}
         \end{center}
         \caption{Estimated head loss from a mechanical water meter typically installed in a domestic setting (Kent PSMT 25mm).}
         \label{fig:headloss}
@@ -150,7 +173,7 @@
 
     \begin{figure}
         \begin{center}
-        \includegraphics[width=\linewidth]{graph_harvest.pdf}
+        \includegraphics[width=\linewidth]{graph_harvest}
         \end{center}
         \caption{Calculated power dissipation by a typical domestic mechanical water meter (Kent PSMT 25mm) for each of the sample profile events.}
         \label{fig:powerDissipated_meter}

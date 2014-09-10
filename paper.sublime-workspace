@@ -4,6 +4,38 @@
 		"selected_items":
 		[
 			[
+				"vol",
+				"voltage_actual"
+			],
+			[
+				"deve",
+				"develops"
+			],
+			[
+				"volt",
+				"voltage_prediction"
+			],
+			[
+				"voltage",
+				"voltage_prediction"
+			],
+			[
+				"app",
+				"applied_pressure"
+			],
+			[
+				"slope",
+				"slope_52"
+			],
+			[
+				"pre",
+				"Pressure"
+			],
+			[
+				"he",
+				"height"
+			],
+			[
 				"set_",
 				"set_ylim"
 			],
@@ -115,7 +147,7 @@
 			"file": "paper.tex",
 			"settings":
 			{
-				"buffer_size": 13434,
+				"buffer_size": 16271,
 				"line_ending": "Unix"
 			}
 		},
@@ -123,15 +155,7 @@
 			"file": "graphs.py",
 			"settings":
 			{
-				"buffer_size": 4055,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/home/mark/Dropbox/University/PhD/Workbench/electrodeInterface/lib/plot/formatter.py",
-			"settings":
-			{
-				"buffer_size": 8182,
+				"buffer_size": 7726,
 				"line_ending": "Unix"
 			}
 		}
@@ -139,9 +163,13 @@
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 375.0,
+		"height": 252.0,
 		"selected_items":
 		[
+			[
+				":w",
+				":w - Save"
+			],
 			[
 				"side",
 				"View: Toggle Side Bar"
@@ -169,10 +197,6 @@
 			[
 				"add",
 				"Git: Add..."
-			],
-			[
-				":w",
-				":w - Save"
 			],
 			[
 				"wrap",
@@ -208,11 +232,18 @@
 	],
 	"file_history":
 	[
-		"/home/mark/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/mark/Dropbox/University/PhD/Workbench/electrodeInterface/lib/plot/formatter.py",
-		"/home/mark/repos/paper_streamingCells/graphs.py",
-		"/home/mark/repos/robotgame/run.txt",
+		"/home/mark/Dropbox/University/PhD/Thesis/Graphs/StreamingPotential/streamingCell_allSingle.py",
+		"/home/mark/Dropbox/University/PhD/Thesis/Graphs/StreamingPotential/streamingCell_allSlope.py",
+		"/home/mark/Dropbox/University/PhD/Thesis/Graphs/StreamingPotential/graphGenerator.py",
 		"/home/mark/.config/dmenu-extended/config/dmenuExtended_preferences.json",
+		"/home/mark/Dropbox/University/PhD/Thesis/Graphs/StreamingPotential/streamingCell_all.py",
+		"/home/mark/Dropbox/University/PhD/Workbench/electrodeInterface/lib/plot/formatter.py",
+		"/home/mark/Dropbox/University/PhD/Scripts/E5270_MeasurementSoftware/Python/measDev.py",
+		"/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/graphGenerator.py",
+		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
+		"/home/mark/repos/paper_streamingCells/graphs.py",
+		"/home/mark/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/mark/repos/robotgame/run.txt",
 		"/home/mark/repos/robotgame/newbot3.py",
 		"/home/mark/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
 		"/home/mark/Dropbox/University/PhD/Workbench/PlotLibrary/formatting.py",
@@ -221,7 +252,6 @@
 		"/home/mark/repos/thesis/thesis.tex",
 		"/home/mark/repos/thesis/content/pt1/01-PowerHarvesting/chapter.tex",
 		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/graphGenerator.py",
-		"/home/mark/Dropbox/University/PhD/Part1/StreamingCell/PowerCurve/streamingCell.py",
 		"/home/mark/repos/paper_interfaceModelScaling/paper.tex",
 		"/home/mark/Dropbox/University/PhD/Workbench/interfaceModel/src/optimise_resistorMesh.py",
 		"/home/mark/Dropbox/University/PhD/Part1/Papers/StreamingCell/Things to show",
@@ -262,6 +292,15 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"  ",
+			"*",
+			"  ",
+			" ,",
+			"\\s\\,",
+			"^",
+			"^0.",
+			"usages",
+			"Fig",
 			"fig:profiles",
 			"have been",
 			"multi",
@@ -305,9 +344,9 @@
 			"e1000 "
 		],
 		"highlight": false,
-		"in_selection": false,
+		"in_selection": true,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"",
@@ -330,12 +369,12 @@
 		"show_context": true,
 		"use_buffer2": true,
 		"whole_word": false,
-		"wrap": true
+		"wrap": false
 	},
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -344,15 +383,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 13434,
+						"buffer_size": 16271,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								45,
-								45
+								11679,
+								11679
 							]
 						],
 						"settings":
@@ -364,10 +403,10 @@
 							"word_wrap": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1852.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
@@ -376,26 +415,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 4055,
+						"buffer_size": 7726,
 						"regions":
 						{
-							"bookmark_i":
-							{
-								"flags": 144,
-								"regions":
-								[
-									[
-										1846,
-										1846
-									]
-								]
-							}
 						},
 						"selection":
 						[
 							[
-								1556,
-								1556
+								4008,
+								4008
 							]
 						],
 						"settings":
@@ -405,37 +433,7 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 161.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 2,
-					"file": "/home/mark/Dropbox/University/PhD/Workbench/electrodeInterface/lib/plot/formatter.py",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 8182,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								313,
-								313
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Python/Python.tmLanguage",
-							"tab_size": 4,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 1602.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -477,7 +475,7 @@
 	"menu_visible": false,
 	"output.exec":
 	{
-		"height": 198.0
+		"height": 201.0
 	},
 	"output.find_results":
 	{
@@ -524,7 +522,7 @@
 	"show_minimap": true,
 	"show_open_files": false,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 181.0,
 	"status_bar_visible": true,
 	"template_settings":

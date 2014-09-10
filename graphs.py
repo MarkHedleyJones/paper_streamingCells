@@ -133,7 +133,6 @@ lib.plot.formatter.format(style='IEEE')
 
 xs = list(np.linspace(0,5,100))
 ys = list(map(pressure_loss_MPa, xs))
-plt.clf()
 plt.gca().set_xlabel('Flow ($m^3/h$)')
 plt.gca().set_ylabel('Head Loss (MPa)')
 plt.grid()
@@ -142,6 +141,7 @@ plt.savefig('graph_pressureLoss.pdf', format='pdf')
 
 
 # Pressure vs slope
+# 1 PSI = 6 894.75729 Pa
 
 height_slope = [
     (0.245, 0.0031649193),
@@ -156,11 +156,84 @@ height_slope = [
     (0.026, 0.0041040953)
 ]
 
-height = map(lambda x: x[0] * 1000, height_slope)
-slope = map(lambda x: x[1] * 1000, height_slope)
+height = list(map(lambda x: x[0] * 1000, height_slope))
+slope = list(map(lambda x: (x[1] * 1000000) / 6894.75729, height_slope))
+
+print("Slope of " +str(height[-2]) + " is " + str(slope[-2]))
+slope_52 = slope[-2]
+
 plt.clf()
-plt.gca().set_xlabel('Flow ($m^3/h$)')
-plt.gca().set_ylabel('Head Loss (MPa)')
+lib.plot.formatter.plot_params['margin']['left'] = 0.1
+lib.plot.formatter.plot_params['margin']['bottom'] = 0.15
+lib.plot.formatter.plot_params['margin']['right'] = 0.026
+lib.plot.formatter.plot_params['margin']['top'] = 0.03
+lib.plot.formatter.format(style='IEEE')    
+plt.gca().set_xlabel('Channel height ($\mu$m)')
+plt.gca().set_ylabel('Voltage-pressure gradient ($\mu$V/Pa)')
+plt.scatter(height,slope, color="black", edgecolor=None, s=5)
+plt.gca().set_xlim(0,250)
 plt.grid()
-plt.plot(xs,ys)
-plt.savefig('graph_pressureLoss.pdf', format='pdf')
+plt.savefig('graph_cellEfficiency.pdf', format='pdf')
+
+pressure_voltage = [
+    (5.0111, 0.0627),
+    (6.0244, 0.0708),
+    (7.0013, 0.0779),
+    (8.0006, 0.0858),
+    (8.9845, 0.0944),
+    (9.9992, 0.1025),
+    (11.025, 0.1111),
+    (12.048, 0.1202),
+    (13.057, 0.1291),
+    (14.037, 0.1367),
+    (14.978, 0.144),
+    (16.002, 0.1523),
+    (16.966, 0.1589),
+    (18.02,  0.1674),
+    (18.989, 0.1744),
+    (20.031, 0.1834),
+    (20.937, 0.1907),
+    (21.914, 0.1981),
+    (22.962, 0.2038),
+    (24.103, 0.2135),
+    (25.024, 0.2223),
+    (26.008, 0.2294),
+    (27.061, 0.2386),
+    (27.806, 0.2404),
+    (28.996, 0.253),
+    (29.869, 0.2609),
+    (30.776, 0.2686),
+    (31.756, 0.2764),
+    (32.791, 0.2852),
+    (33.945, 0.2943),
+    (35.193, 0.3045),
+    (35.887, 0.31),
+    (36.621, 0.3122),
+    (38.362, 0.3293)
+]
+naughty_correction = 0.0234330092033605
+voltage = list(map(lambda x: (x[1] - naughty_correction) * 1000.0, pressure_voltage))
+pressure = list(map(lambda x: (x[0] * 6894.75729)/1000.0, pressure_voltage))
+
+# for volt, press in zip(voltage, pressure):
+#     # slope_52 is in uV per Pa
+#     # press is in kPa
+#     applied_pressure = press * 1000
+#     voltage_prediction_uV = applied_pressure * slope_52
+#     voltage_prediction = voltage_prediction_uV / 1.0e6
+#     voltage_actual = volt/1.0e3
+#     diff = voltage_actual - voltage_prediction
+#     print("At {2:.3f} Pa the channel should develop {0:.3f}V but actually develops {1:.3f}V ({3:.3f} difference)".format(voltage_prediction, voltage_actual, press, diff))
+
+plt.clf()
+lib.plot.formatter.plot_params['margin']['left'] = 0.11
+lib.plot.formatter.plot_params['margin']['bottom'] = 0.15
+lib.plot.formatter.plot_params['margin']['right'] = 0.026
+lib.plot.formatter.plot_params['margin']['top'] = 0.03
+lib.plot.formatter.format(style='IEEE')    
+plt.gca().set_xlabel('Pressure (kPa)')
+plt.gca().set_ylabel('Voltage (mV)')
+plt.grid()
+plt.scatter(pressure, voltage, color="black", edgecolor=None, s=5)
+# plt.gca().set_xlim(0,250)
+plt.savefig('graph_voltagePressure.pdf', format='pdf')
