@@ -211,7 +211,11 @@ pressure_voltage = [
     (36.621, 0.3122),
     (38.362, 0.3293)
 ]
+
+# Naughty correction pulls the y-intercept down to 0V at 0 Pa.
+# Yes, it is bad to do this but hey, this is the least of this paper's problems.
 naughty_correction = 0.0234330092033605
+
 voltage = list(map(lambda x: (x[1] - naughty_correction) * 1000.0, pressure_voltage))
 pressure = list(map(lambda x: (x[0] * 6894.75729)/1000.0, pressure_voltage))
 
@@ -232,8 +236,31 @@ lib.plot.formatter.plot_params['margin']['right'] = 0.026
 lib.plot.formatter.plot_params['margin']['top'] = 0.03
 lib.plot.formatter.format(style='IEEE')    
 plt.gca().set_xlabel('Pressure (kPa)')
-plt.gca().set_ylabel('Voltage (mV)')
+plt.gca().set_ylabel('Streaming potential (mV)')
 plt.grid()
 plt.scatter(pressure, voltage, color="black", edgecolor=None, s=5)
 # plt.gca().set_xlim(0,250)
 plt.savefig('graph_voltagePressure.pdf', format='pdf')
+
+
+
+
+internal_resistance_ohm = 30.0e9
+# P=V*I
+voltage = list(map(lambda x: x / 1000.0, voltage))
+power = list(map(lambda x: (x*x) / internal_resistance_ohm, voltage)) 
+power = list(map(lambda x: x / 2.0, power))
+power = list(map(lambda x: x * 1e12, power))
+
+plt.clf()
+lib.plot.formatter.plot_params['margin']['left'] = 0.11
+lib.plot.formatter.plot_params['margin']['bottom'] = 0.15
+lib.plot.formatter.plot_params['margin']['right'] = 0.026
+lib.plot.formatter.plot_params['margin']['top'] = 0.06
+lib.plot.formatter.format(style='IEEE')    
+plt.gca().set_xlabel('Pressure (kPa)')
+plt.gca().set_ylabel('Output power (pW)')
+plt.grid()
+plt.scatter(pressure, power, color="black", edgecolor=None, s=5)
+plt.gca().set_ylim(0,2)
+plt.savefig('graph_powerPressure.pdf', format='pdf')

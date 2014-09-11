@@ -100,11 +100,6 @@
     And finally, we conclude with a discussion on the feasibility of using streaming cells to harvest energy.
 
     \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
-    In~\cite{Gu2000}, the authors employ a relatively simple parallel plate design to create a streaming cell.
-    They glued plastic shims between parallel plates of glass, providing a simple way of controlling channel height.
-    Using that method, the authors fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
-    Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
-
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{Photo_streamingPotential_Assembly_Step3.JPG}
@@ -112,6 +107,11 @@
         \caption{One of our ten constructed streaming cells mounted in an acrylic holder. Copper wires have been epoxied into each side to provide a means of measuring the developed potential across the cell. The plastic shims are visible as the orange strips at each side of the cell.}
         \label{fig:cell}
     \end{figure}
+
+    In~\cite{Gu2000}, the authors employ a relatively simple parallel plate design to create a streaming cell.
+    They glued plastic shims between parallel plates of glass, providing a simple way of controlling channel height.
+    Using that method, the authors fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
+    Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
 
     We replicate the fabrication method and approximate dimensions of \cite{Gu2000} to produce ten streaming cells.
     The internal dimensions of which are \SI{3}{\centi\metre} long, \SI{1}{\centi\metre} wide and heights in the range of \SI{25}{\micro\metre} to \SI{250}{\micro\metre}.
@@ -134,6 +134,12 @@
     Here the ratio of streaming voltage to applied pressure is plotted as a function of the internal channel height.
     It is clear from these measurements that narrower channels offer greater electrical conversion efficiency.
 
+    Based on measurements of the \SI{52}{\micro\meter} channel we estimate the amount of electrical power available for harvesting.
+    Fig.~\ref{fig:equivalentCircuit} shows the equivalent circuit for a streaming potential cell delivering a streaming current ($I_{S}$).
+    The the streaming potential ($V_{S}$) was measured with no load restance ($R_{L}$) due to the use of the E5270 preventing load current being drawn.
+    The dimensions of the cell together with the conductivity of the working fluid give the cell an internal resistance ($R_{ch}$) of approximately \SI{30}{\giga\ohm}.
+    Using these parameters, the available output power from the cell has been calculated and is presented in Fig.~\ref{fig:cellPowerPressure} with respect to the applied pressuse.
+
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{graph_cellEfficiency}
@@ -149,6 +155,24 @@
         \end{center}
         \caption{Measured voltage developed across the \SI{52}{\micro\meter} streaming cell as a function of the differential pressure across the cell.}
         \label{fig:cellVoltagePressure}
+    \end{figure}
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{StreamingCell_EquivalentCircuit}
+        \end{center}
+        \caption{Equivalent circuit of the streaming potential cell.
+        Streaming current is produced by the current source and is denoted $I_{S}$.
+        The internal channel resistance is $R_{ch}$ and an external load is denoted as $R_{L}$}
+        \label{fig:equivalentCircuit}
+    \end{figure}
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_powerPressure}
+        \end{center}
+        \caption{Maximum power available to an external load placed across the \SI{52}{\micro\meter} cell as a function of pressure differential. Power has been calculated using a load resistance of \SI{30}{\giga\ohm} where only half of total power is available to the load. Note that the units of power are expressed in picoWatts.}
+        \label{fig:cellPowerPressure}
     \end{figure}
 
 
@@ -203,13 +227,11 @@
     
     \section{Estimation of Power Requirements}
     \label{sect:powerRequirements}
+    
 
     
     \section{Estimation of Streaming Cell Harvester}
     \label{sect:harvesterSize}
-
-    \section{Results}
-    \label{sect:results}
 
     \section{Conclusion}
     \bibliographystyle{plain}
