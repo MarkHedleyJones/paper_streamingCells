@@ -89,7 +89,7 @@ def convert_litrePerSecond_cubicMeterPerHour(litrePerSec):
     return cubicMeterPerHour
 
 def convert_cubicMeterPerHour_cubicMeterPerSecond(cubicMeterPerHour):
-    return cubicMeterPerHour / 60.0
+    return cubicMeterPerHour / 3600.0
 
 def convert_MPa_Pa(pressure_MPa):
     return pressure_MPa * 1000000.0
@@ -112,8 +112,8 @@ plt.clf()
 lib.plot.formatter.format(style='IEEE')
 ax = plt.gca()
 ax.set_xlabel('Time (minutes)')
-ax.set_ylabel('Power (Watts)')
-ax.set_ylim(0,40)
+ax.set_ylabel('Power (W)')
+ax.set_ylim(0,0.7)
 plt.plot(xs_flow_min,list(map(flow_to_power, ys_washing)), label='Washing machine', linestyle='-')
 plt.plot(xs_flow_min,list(map(flow_to_power, ys_shower)), label='Shower', linestyle='--')
 plt.plot(xs_flow_min,list(map(flow_to_power, ys_toilet)), label='Toilet', linestyle=':')

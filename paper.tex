@@ -15,7 +15,7 @@
     \begin{abstract}
         We investigate the possibility of using streaming cells as a means of harvesting energy from a town water supply.
         We verify streaming cell measurements found in the literature and extend those measurements over a wider range of dimensions.
-        We measure the electrical power developed from ten streaming cells over a range of pressure differentials using town water.
+        We measure the electrical power developed streaming cells using town water.
         We estimate the amount of energy required to operate a simple data logger and transmitter.
         We estimate the amount of energy available from a typical domestic household based on water usage data.
         From these estimates we calculate minimum geometric dimensions required to deliver practical power output to a wireless water meter.
@@ -23,21 +23,13 @@
     \end{abstract}
 
     \section{Introduction}
-    Domestic and commercial water metering is becoming increasingly important throughout the world.
-    Having a cheap and reliable way to retrieve metered data is an important consideration for utility companies.
-    There are two practical methods of retrieving data from domestic water meters:
-    \begin{enumerate}
-        \item \emph{Visual inspection:}
-            Involves a meter-reader visually sighting the meter's mechanical readout from time to time.
-            Generally the reading frequency is kept to a minimum and estimate readings are made in the interim.
-        \item \emph{Electronic telemetry:}
-            Automatic wireless transmission of data to the billing company.
-            Requires a power source at the site of metering, which is generally underground at a property's boundary.
-        \end{enumerate}
-    Due to the location of water metering, electrical power is usually provided by long life batteries.
-    The batteries used in automatic meter readers are non-rechargeable and have a maximum life-span of 10 years.\cite{BMeters2014}
-    Automatic meter reading enables utility companies to detect water leaks at consumers' properties.~\cite{Britton2013}
+    Domestic and commercial water metering is becoming increasingly common throughout the world.~\cite{Chang2012}
+    Cheap and reliable methods of retrieving meter data is an important consideration for utility companies.
+    The introduction of wireless automatic meter readers offers many advantages to town water suppliers.
+    These advantages include reductions in cost and error rates associated with collecting metering data, increased billing frequency, leak detection and the elimination of the need for meter readers to access the consumers property.~\cite{Chang2012,Britton2013}
 
+    The location of a typical water water meter means electrical power is usually provided by long life batteries.
+    The batteries used in automatic meter readers are non-rechargeable and have a life-span of 10 years.\cite{BMeters2014}
     The possibility of harvesting energy at the meter should allow frequent data reporting with less maintenance.
     Removing the batteries from current meter reading systems should reduce both the total cost of ownership and electrical waste.
 
@@ -218,20 +210,53 @@
     This data is presented as figure~\ref{fig:powerDissipated_meter}.
     The total energy dissipated within the water meter for each of the water events is:
     \begin{itemize}
-    \item \SI{32.8}{\kilo\joule} per load of washing,
-    \item \SI{13.3}{\kilo\joule} per shower, and
-    \item \SI{1.45}{\kilo\joule} per flush of the toilet.
+    \item \SI{547}{\joule} per load of washing,
+    \item \SI{222}{\joule} per shower, and
+    \item \SI{24.3}{\joule} per flush of the toilet.
     \end{itemize}
+
     % These figures are based on average duration and flow rates as found in \cite{Heinrich2008}, and the estimated head loss from Fig.~\ref{fig:headloss}.
-    Over a week, our reference water meter would dissipate a total of \SI{431}{\kilo\joule}, averaging \SI{61.6}{\kilo\joule} per day.
-    
+    Over an average week the the reference water meter would dissipate approximately \SI{7.20}{\kilo\joule} of energy; averaging \SI{1.03}{\kilo\joule} per day.
+
     \section{Estimation of Power Requirements}
     \label{sect:powerRequirements}
-    
+    In \cite{Jones2011} we measure the energy efficiency of various low-power microcontrollers.
+    Here we take measured data from that paper to estimate processor energy requirements.
+    Measurements of an Atmel ATtiny 25V have been used as it offered good performance over a wide range of processor functions.
+    A crude estimation of the processor's event loop is as follows:
+    \begin{itemize}
+    \item Sleep for \SI{1}{\second} (\SI{97.4}{\nano\joule})
+    \item Execute 1 000 instructions (\SI{1.14}{\micro\joule})
+    \item Take 2 ADC measurements (\SI{2.56}{\nano\joule})
+    \item Write 2 bytes to non-volatile memory (\SI{79.0}{\micro\joule})
+    \end{itemize}
+    Every six hours the device will transmit metered data by doing the following actions:
+    \begin{itemize}
+    \item Execute 1 000 000 instructions (\SI{1.14}{\milli\joule})
+    \item Transmit 100 bytes of data over zigbee radio (\SI{12.3}{\milli\joule})
+    \item Write 10 bytes to non-volatile memory (\SI{394}{\micro\joule})
+    \end{itemize}
 
-    
+    The energy requirements for a 100 byte data transmission over ZigBee (Digi International XBee S2) is presented as Fig.~\ref{fig:xbeePower}.
+    This measurement was recorded using a Tektronix TDC 2012 Digital Storage Oscilloscope across a \SI{10.2}{\ohm} current sense resistor.
+
+    Our figures show a monitoring and transmitting device needs \SI{6.96}{\joule} per day to operate in ideal transmission conditions.
+    If the transmitter were to require $100\times$ more energy to transmit, as an estimate of poor conditions, the energy requirements would jump to \SI{9.39}{\joule} per day.
+    It is therefore estimated that an energy harvester would need to deliver approximately \SI{10}{\joule} of energy per day.
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_XbeePower_reduced}
+        \end{center}
+        \caption{Power draw from a ZigBee wireless module transmitting to a nearby receiver in optimal conditions. The ZigBee module is operated with a 3.3V supply voltage and is powered down between transmissions. The energy required to power-up the ZigBee module and transmit 100 bytes of data is \SI{12.3}{\milli\joule}.}
+        \label{fig:xbeePower}
+    \end{figure}
+
     \section{Estimation of Streaming Cell Harvester}
     \label{sect:harvesterSize}
+    We have estimated that a harvester would need to harvest approximately \SI{10}{\joule} of energy per day.
+    We have calculated that approximately \SI{1}{\kilo\joule} of energy is dissipated per day inside a typical water meter at a two occupant dwelling.
+    Therefore we predict that a harvester needs to capture only 1\% of the energy lost in a typical domestic water meter in order to operate a basic smart metering device.
 
     \section{Conclusion}
     \bibliographystyle{plain}
