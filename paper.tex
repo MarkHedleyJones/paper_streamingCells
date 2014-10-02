@@ -105,12 +105,10 @@
     Using that method, the authors fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
     Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
 
-    We replicate the fabrication method and approximate dimensions of \cite{Gu2000} to produce ten streaming cells.
-    The internal dimensions of which are \SI{3}{\centi\metre} long, \SI{1}{\centi\metre} wide and heights in the range of \SI{25}{\micro\metre} to \SI{250}{\micro\metre}.
-    These dimensions are directly comparable to those of \cite{Gu2000}, where the length and width are the same but the heights span a wider range.
-    The channels themselves are made from glass microscope slides (Sail Brand - JIA 7101WT) sectioned into halves.
-    Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to create the channels.
-    The dimensions at each end of each channel are measured under a microscope to determine the actual channel height and ensure symmetry.
+    We replicate the approximate dimensions of \cite{Gu2000} to produce ten streaming cells (\SI{245}{\micro\meter}, \SI{178}{\micro\meter}, \SI{161}{\micro\meter}, \SI{125}{\micro\meter}, \SI{106}{\micro\meter}, \SI{75}{\micro\meter}, \SI{71}{\micro\meter}, \SI{56}{\micro\meter}, \SI{52}{\micro\meter}, \SI{26}{\micro\meter}).
+    The channels are made from glass microscope slides (Sail Brand - JIA 7101WT) sectioned into halves.
+    Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to separate the slides.
+    The dimensions at each end of each channel are measured under a microscope to determine the channel height once the channels had set.
 
     Each channel is epoxied between two acrylic reservoirs and a base plate.
     This provides a rigid structure under pressure and provides connection of wires and hoses.
@@ -122,22 +120,20 @@
     An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
     The working fluid, being tap water, had a conductivity of \SI{1.87e-6}{\siemens\per\meter} as measured with an EDT Instruments RE 388Tx Conductivity Meter.
 
-    Measured data obtained from each of the ten streaming cells is presented in Fig.~\ref{fig:cellEfficiency}.
-    Here the ratio of streaming voltage to applied pressure is plotted as a function of the internal channel height.
-    It is clear from these measurements that narrower channels offer greater electrical conversion efficiency.
+    Measured pressure-to-voltage gradients from each of the ten streaming cells is presented in Fig.~\ref{fig:cellEfficiency}.
+    We put the spread in data points down to asymmetry in the cells and uncertainty of the internal dimensions.
+    When viewed under the microscope the opposite ends of cell heights differing as much as \SI{3}{\micro\meter} in some cases.
+    Due to the opacity of the resin used, measurement of the internal cell dimensions was not possible.
 
-    Based on measurements of the \SI{52}{\micro\meter} channel we estimate the amount of electrical power available for harvesting.
-    Fig.~\ref{fig:equivalentCircuit} shows the equivalent circuit for a streaming potential cell delivering a streaming current ($I_{S}$).
-    The the streaming potential ($V_{S}$) was measured with no load restance ($R_{L}$) due to the use of the E5270 preventing load current being drawn.
-    The dimensions of the cell together with the conductivity of the working fluid give the cell an internal resistance ($R_{ch}$) of approximately \SI{30}{\giga\ohm}.
-    Using these parameters, the available output power from the cell has been calculated and is presented in Fig.~\ref{fig:cellPowerPressure} with respect to the applied pressuse.
+    The plot shows a loose relationship between channel height and voltage gradient per Pascal of applied pressure.
+    The cell with height \SI{26}{\micro\meter} shows a much lower slope, probably as a result of a reduced flow rate.
+    We were unable to measure the flow rate of the \SI{26}{\micro\meter} cell before it burst.
 
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{graph_cellEfficiency}
         \end{center}
-        \caption{Gradient of developed streaming voltage with applied pressure differential versus the channel height of ten fabricated streaming cells.
-        The most efficient cell has a channel height of \SI{52}{\micro\meter}.}
+        \caption{Gradient of developed streaming voltage with applied pressure differential versus the channel height of ten fabricated streaming cells.}
         \label{fig:cellEfficiency}
     \end{figure}
 
@@ -148,6 +144,33 @@
         \caption{Measured voltage developed across the \SI{52}{\micro\meter} streaming cell as a function of the differential pressure across the cell.}
         \label{fig:cellVoltagePressure}
     \end{figure}
+
+    We now measure available power output of the \SI{71}{\micro\meter} streaming cell.
+    This cell was chosen as the \SI{52}{\micro\meter} cell burst during operation and the \SI{71}{\micro\meter} cell seemed an appropriate substitute as per Fig.~\ref{fig:cellEfficiency}.
+    We measure the streaming voltage, and pressure, while sweeping the amount of electrical current drawn from the device.
+    The applied pressure was held at \SI{260}{\kilo\pascal} for the duration of the measurement and the flow rate was previously determined to be \SI{2.05}{\milli\litre\per\second}.
+
+    Fig.~\ref{fig:cellOutput} shows the measured data along with the calculated power.
+    The maximum power theorem states that the maximum power
+
+
+    \begin{figure}
+        \begin{center}
+        \includegraphics[width=\linewidth]{graph_cellOutput}
+        \end{center}
+        \caption{Cell characteristics plotted against drawn current.
+        The cell's output }
+        \label{fig:cellOutput}
+    \end{figure}
+
+
+    Based on measurements of the \SI{52i}{\micro\meter} channel we estimate the amount of electrical power available for harvesting.
+    Fig.~\ref{fig:equivalentCircuit} shows the equivalent circuit for a streaming potential cell delivering a streaming current ($I_{S}$).
+    The the streaming potential ($V_{S}$) was measured with no load resistance ($R_{L}$) due to the use of the E5270 preventing load current being drawn.
+    The dimensions of the cell together with the conductivity of the working fluid give the cell an internal resistance ($R_{ch}$) of approximately \SI{30}{\giga\ohm}.
+    Using these parameters, the available output power from the cell has been calculated and is presented in Fig.~\ref{fig:cellPowerPressure} with respect to the applied pressure.
+
+
 
     \begin{figure}
         \begin{center}
@@ -183,7 +206,7 @@
         \begin{center}
         \includegraphics[width=\linewidth]{graph_pressureLoss}
         \end{center}
-        \caption{Estimated head loss from a mechanical water meter typically installed in a domestic setting (Kent PSMT 25mm).}
+        \caption{Estimated head loss from a mechanical water meter typically installed in a domestic setting.}
         \label{fig:headloss}
     \end{figure}
 
@@ -191,7 +214,7 @@
         \begin{center}
         \includegraphics[width=\linewidth]{graph_harvest}
         \end{center}
-        \caption{Calculated power dissipation by a typical domestic mechanical water meter (Kent PSMT 25mm) for each of the sample profile events.}
+        \caption{Calculated power dissipation by a typical domestic mechanical water meter for each of the sample profile events.}
         \label{fig:powerDissipated_meter}
     \end{figure}
 
@@ -204,10 +227,9 @@
     The during that time five uses of a washing machine, fourteen showers and fifty six toilet flushes occur.
     A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}.
 
-    The Kent PSMT 25mm is a water meter typically installed in homes around the Auckland district.~\cite{WatercareNewZealand2014}.
-    Figure~\ref{fig:headloss} shows the head loss curve that we have reconstructed based on product specifications for this meter.
-    From that curve, we calculate the amount of power dissipated by the Kent PSMT meter during the average washing machine cycle, shower, and toilet flush.
-    This data is presented as figure~\ref{fig:powerDissipated_meter}.
+    Figure~\ref{fig:headloss} shows the head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT 25mm).~\cite{WatercareNewZealand2014}
+    Using this pressure loss curve we calculate the amount of power dissipated by a typical water meter during an average washing machine cycle, shower, and toilet flush.
+    Calculated pressure loss due to each of these events is presented as figure~\ref{fig:powerDissipated_meter}.
     The total energy dissipated within the water meter for each of the water events is:
     \begin{itemize}
     \item \SI{547}{\joule} per load of washing,

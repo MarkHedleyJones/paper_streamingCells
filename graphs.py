@@ -36,14 +36,14 @@ def func_washing(x, start=100, flow=0.122):
     cycle1_end = cycle1_start + 8.14*60.0
     cycle2_start = cycle1_end + 20*60.0
     cycle2_end = cycle2_start + 8.14*60.0
-    
+
     if cycle1_start < x < cycle1_end:
         val = flow
     elif cycle2_start < x < cycle2_end:
         val = flow
     else:
         val = 0
-        
+
     return val
 
 xs = list(range(60*60))
@@ -129,7 +129,7 @@ def pressure_loss_MPa(flow_m3_hour):
     return (0.00316*math.pow(flow_m3_hour,2) + 0.00331*flow_m3_hour + 0.00235)
 
 plt.clf()
-lib.plot.formatter.format(style='IEEE')    
+lib.plot.formatter.format(style='IEEE')
 
 xs = list(np.linspace(0,5,100))
 ys = list(map(pressure_loss_MPa, xs))
@@ -167,11 +167,12 @@ lib.plot.formatter.plot_params['margin']['left'] = 0.1
 lib.plot.formatter.plot_params['margin']['bottom'] = 0.15
 lib.plot.formatter.plot_params['margin']['right'] = 0.026
 lib.plot.formatter.plot_params['margin']['top'] = 0.03
-lib.plot.formatter.format(style='IEEE')    
+lib.plot.formatter.format(style='IEEE')
 plt.gca().set_xlabel('Channel height ($\mu$m)')
 plt.gca().set_ylabel('Voltage-pressure gradient ($\mu$V/Pa)')
-plt.scatter(height,slope, color="black", edgecolor=None, s=5)
+plt.scatter(height,slope, marker='o', facecolor='blue', edgecolor='blue', s=8)
 plt.gca().set_xlim(0,250)
+plt.gca().set_ylim(0,1.201)
 plt.grid()
 plt.savefig('graph_cellEfficiency.pdf', format='pdf')
 
@@ -234,11 +235,11 @@ lib.plot.formatter.plot_params['margin']['left'] = 0.11
 lib.plot.formatter.plot_params['margin']['bottom'] = 0.15
 lib.plot.formatter.plot_params['margin']['right'] = 0.026
 lib.plot.formatter.plot_params['margin']['top'] = 0.03
-lib.plot.formatter.format(style='IEEE')    
+lib.plot.formatter.format(style='IEEE')
 plt.gca().set_xlabel('Pressure (kPa)')
 plt.gca().set_ylabel('Streaming potential (mV)')
 plt.grid()
-plt.scatter(pressure, voltage, color="black", edgecolor=None, s=5)
+plt.plot(pressure, voltage, marker='.', markersize=5)
 # plt.gca().set_xlim(0,250)
 plt.savefig('graph_voltagePressure.pdf', format='pdf')
 
@@ -248,7 +249,7 @@ plt.savefig('graph_voltagePressure.pdf', format='pdf')
 internal_resistance_ohm = 30.0e9
 # P=V*I
 voltage = list(map(lambda x: x / 1000.0, voltage))
-power = list(map(lambda x: (x*x) / internal_resistance_ohm, voltage)) 
+power = list(map(lambda x: (x*x) / internal_resistance_ohm, voltage))
 power = list(map(lambda x: x / 2.0, power))
 power = list(map(lambda x: x * 1e12, power))
 
@@ -257,7 +258,7 @@ lib.plot.formatter.plot_params['margin']['left'] = 0.11
 lib.plot.formatter.plot_params['margin']['bottom'] = 0.15
 lib.plot.formatter.plot_params['margin']['right'] = 0.026
 lib.plot.formatter.plot_params['margin']['top'] = 0.06
-lib.plot.formatter.format(style='IEEE')    
+lib.plot.formatter.format(style='IEEE')
 plt.gca().set_xlabel('Pressure (kPa)')
 plt.gca().set_ylabel('Output power (pW)')
 plt.grid()
