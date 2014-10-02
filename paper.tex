@@ -7,7 +7,7 @@
 
 \title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}
 
-\author{Mark~H.~Jones, and Jonathan~Scott}
+\author{Mark~H.~Jones and Jonathan~Scott}
 
 \begin{document}
     \maketitle
@@ -25,39 +25,39 @@
     \section{Introduction}
     Domestic and commercial water metering is becoming increasingly common throughout the world.~\cite{Chang2012}
     Cheap and reliable methods of retrieving meter data is an important consideration for utility companies.
-    The introduction of wireless automatic meter readers offers many advantages to town water suppliers.
-    These advantages include reductions in cost and error rates associated with collecting metering data, increased billing frequency, leak detection and the elimination of the need for meter readers to access the consumers property.~\cite{Chang2012,Britton2013}
+    The introduction of wireless automatic meter readers offers many advantages to suppliers of town water.
+    These advantages include reductions in cost and error rates associated with collecting metering data, increased billing frequency, leak detection and the elimination of the need for meter readers to access the consumers' property.~\cite{Chang2012,Britton2013}
 
-    The location of a typical water water meter means electrical power is usually provided by long life batteries.
-    The batteries used in automatic meter readers are non-rechargeable and have a life-span of 10 years.\cite{BMeters2014}
+    The location of a typical water meter means electrical power is usually provided by long life batteries.
+    The batteries used in automatic meter readers are non-rechargeable and have a life-span of 10 years.~\cite{BMeters2014}
     The possibility of harvesting energy at the meter should allow frequent data reporting with less maintenance.
     Removing the batteries from current meter reading systems should reduce both the total cost of ownership and electrical waste.
 
-    Streaming cells provide a way of converting fluid energy into electrical energy.
+    Streaming cells provide a way of converting fluid energy into electrical energy without moving parts.
     They work on the principle that charged surfaces in contact with ionic solutions attract counter-ions\footnote{The terms counter-ion and co-ion refer to ions of opposite and like charge relative to the polarity of the solid surface respectively.} so as to form a charged layer at the contact surface.~\cite{Stein2004}
     This charged layer is termed the double layer and is the key mechanism that enables streaming cell energy conversion.
-    It is possible to pump and collect ions from withing the double layer with the application of pressure.
+    The conversion is made by forcing ions within the double layer through narrow channels with the application of hydrostatic pressure.
 
-    A double layer is called such because it is made of two inividual layers; the Stern and diffuse layers.
-    % A double layer can be broken into two sub-layers; the Stern and diffuse layers.
-    The Stern layer is comprised of immobilised ions situated very close the charged solid surface.~\cite{Salieb-Beugelaar2009}
-    The diffuse layer is formed by the ions attracted to the surface, but not so strongly as to be immobile.
+    A double layer is called such because it is made of two individual layers; the Stern and diffuse layers.
+    The Stern layer is comprised of immobilised ions situated at the charged solid surface.~\cite{Salieb-Beugelaar2009}
+    The diffuse layer surrounds the Stern layer where counter-ions are not so strongly bound as to be immobile.
     A streaming cell moves ions in the diffuse layer through one or more narrow channels, concentrating them on the other side.
 
     Streaming cell channels can be created individually using a range fabrication methods, such as chemical etching or the use of narrowly separated parallel plates.
     Channels can also be formed en-mass by using porous materials such as glass or ceramics as the cell where the pores themselves form channels.
-    When using glass, the surface spontaneously develops a negative surface charge when it comes in contact with water.
-    The charge is caused by deprotonation at the contact surface (SiOH~$\leftrightarrows$~SiO$^{-}+$~H$^{+}$).
-    By immersing a channel in an electrolyte solution double layers line the interior walls of the channel.
-    The thickness of this layer is defined by the Debye length ($l_{D}$) and is controlled the ionic concentration of the liquid.~\cite{Israelachvili2011}
+    Glass has the attractive property that it obtains a negative surface charge when in contact with water.
+    This surface charge is caused by the deprotonation of surface silanol groups in glass (SiOH~$\leftrightarrows$~SiO$^{-}+$~H$^{+}$).~\cite{Kirby2004a}
+    By immersing a glass channel in an electrolyte solution, double layers of positive ions occupy the interior walls of the channel.
+    The thickness of the double layer is defined as the Debye length ($l_{D}$) and is controlled the ionic concentration of the liquid.~\cite{Israelachvili2011}
 
-    When the dimensions of a channel become small the double layers begin to overlap and co-ions are repelled from the channel.
-    Counter-ions within a streaming cell are collected by applying a pressure gradient across the channel/cell.
-    Pressure forces the liquid through the channel (from which co-ions have been removed) creating a streaming current.
-    It is the streaming current that raises the voltage (streaming potential) across the cell as the ions are pumped through it.
+    When the dimensions of a channel become small enough, double layers will overlap.
+    Overlapping double layers mean that co-ions are repelled from within the channel.
+
+    Counter-ions within a streaming cell are transported by applying a pressure gradient across the channel/cell.
+    Pressure forces the counter-ion rich fluid through the channel creating a streaming current.
+    Streaming currents establish a voltage across the cell, termed streaming potential, due to ionic concentrations at each end of the channel becoming unbalanced.
 
     Streaming currents have been heavily investigated as a means of generating electrical energy from pressure gradients.~\cite{Chang2009,Daiguji2006,Daiguji2004b,Davidson2008a,Davidson2008,CherngHon2012,Jiao2014,Lu2006,Olthuis2005,Osterle1964,Pennathur2007,Ren2008a,VanderHeyden2006,Heyden2007,Xie2008,Yang2003}
-    % It is expected that a channel height equal to twice the Debye length leads to maximum energy conversion efficiency.~\cite{Daiguji2004b}
     Theoretical predictions of the efficiency of standard micro/nano-fluidic channels are 2\% for pure water and 7\% for sodium chloride.~\cite{VanderHeyden2006}
     Experimental results show conversion efficiencies in the range of:
     \begin{itemize}
@@ -91,7 +91,7 @@
     In section \ref{sect:results} we combine and present results of our measurements and quantify our predictions.
     And finally, we conclude with a discussion on the feasibility of using streaming cells to harvest energy.
 
-    \section{Readily Attainable Streaming Cell Power} \label{sect:streamingCell}
+    \section{Readily Attainable Streaming Cell Efficiency} \label{sect:streamingCell}
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{Photo_streamingPotential_Assembly_Step3.JPG}
@@ -101,7 +101,7 @@
     \end{figure}
 
     In~\cite{Gu2000}, the authors employ a relatively simple parallel plate design to create a streaming cell.
-    They glued plastic shims between parallel plates of glass, providing a simple way of controlling channel height.
+    They glued plastic shims between parallel plates of glass, providing a simple way of setting a channel's height.
     Using that method, the authors fabricated three cells with channel heights of \SI{50}{\micro\metre}, \SI{100}{\micro\metre} and \SI{150}{\micro\metre}.
     Each of the channels were \SI{3}{\centi\metre} long and had a inner width of \SI{1}{\centi\metre}.
 
@@ -116,18 +116,18 @@
     A photo of one of the cells is shown in Fig. \ref{fig:cell}.
 
     Pressure is applied across each cell by connecting one end to a tap and leaving the other open to atmosphere.
-    A Honeywell pressure sensor (model 26PC15SMT) is connected across the input/output tubes to measure the developed pressure differential.
-    An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential and read the pressure sensor's output.
-    The working fluid, being tap water, had a conductivity of \SI{1.87e-6}{\siemens\per\meter} as measured with an EDT Instruments RE 388Tx Conductivity Meter.
+    A Honeywell pressure sensor (model 26PC15SMT) is placed across the cell to measure applied pressure.
+    An Agilent precision measurement mainframe (model E5270B) is used to measure streaming potential, streaming current and to read the pressure sensor's output.
+    The working fluid, being tap water, had a conductivity of \SI{183e-6}{\siemens\per\meter} as measured with an EDT Instruments RE 388Tx Conductivity Meter.
 
-    Measured pressure-to-voltage gradients from each of the ten streaming cells is presented in Fig.~\ref{fig:cellEfficiency}.
-    We put the spread in data points down to asymmetry in the cells and uncertainty of the internal dimensions.
-    When viewed under the microscope the opposite ends of cell heights differing as much as \SI{3}{\micro\meter} in some cases.
+    Measured pressure-to-voltage gradients from each of the ten streaming cells are presented in Fig.~\ref{fig:cellEfficiency}.
+    Spread in the data suggests uncertainty in the internal dimensions of each cell.
     Due to the opacity of the resin used, measurement of the internal cell dimensions was not possible.
-
-    The plot shows a loose relationship between channel height and voltage gradient per Pascal of applied pressure.
-    The cell with height \SI{26}{\micro\meter} shows a much lower slope, probably as a result of a reduced flow rate.
-    We were unable to measure the flow rate of the \SI{26}{\micro\meter} cell before it burst.
+    The plot shows the relationship between channel height and voltage gradient per Pascal of applied pressure.
+    Each cell had a different flow rate, which this plot does not take into account.
+    Three of the cells bust before flow measurements were obtained.
+    % The \SI{26}{\micro\meter} channel shows a much lower gradient due to . which we expect is a result of a reduced flow rate.
+    % The \SI{26}{\micro\meter} cell burst before we obtained flow rate measurements.
 
     \begin{figure}
         \begin{center}
@@ -146,49 +146,43 @@
     \end{figure}
 
     We now measure available power output of the \SI{71}{\micro\meter} streaming cell.
-    This cell was chosen as the \SI{52}{\micro\meter} cell burst during operation and the \SI{71}{\micro\meter} cell seemed an appropriate substitute as per Fig.~\ref{fig:cellEfficiency}.
-    We measure the streaming voltage, and pressure, while sweeping the amount of electrical current drawn from the device.
+    This cell was chosen as it remained mechanically robust and had good output characteristics.
+    We measure the streaming voltage and pressure while sweeping the electrical current draw from the device.
     The applied pressure was held at \SI{260}{\kilo\pascal} for the duration of the measurement and the flow rate was previously determined to be \SI{2.05}{\milli\litre\per\second}.
 
-    Fig.~\ref{fig:cellOutput} shows the measured data along with the calculated power.
-    The maximum power theorem states that the maximum power
+    Fig.~\ref{fig:cellOutput} shows the measured data along with the calculated power curve.
+    Using the power curve we calculate the cell's internal electrical resistance to be \SI{5.6}{\mega\ohm}.
+    Peak output power of \SI{1.52}{\nano\watt} is delivered when the current draw is \SI{33.5}{\nano\ampere} with a voltage of \SI{182}{\milli\volt}.
+
+    Based on the pressure applied and the flow rate through the cell, the input power is \SI{539}{\milli\watt}.
+    Energy conversion efficiency is in the order of $1\times 10^{-6}\%$.
 
 
     \begin{figure}
         \begin{center}
         \includegraphics[width=\linewidth]{graph_cellOutput}
         \end{center}
-        \caption{Cell characteristics plotted against drawn current.
-        The cell's output }
+        \caption{Streaming cell output voltage as a function of drawn current with constant pressure.
+        The cell's calculated output power appears in the lower plot with a peak at approximately \SI{33.5}{\nano\ampere}.}
         \label{fig:cellOutput}
     \end{figure}
 
 
-    Based on measurements of the \SI{52i}{\micro\meter} channel we estimate the amount of electrical power available for harvesting.
-    Fig.~\ref{fig:equivalentCircuit} shows the equivalent circuit for a streaming potential cell delivering a streaming current ($I_{S}$).
-    The the streaming potential ($V_{S}$) was measured with no load resistance ($R_{L}$) due to the use of the E5270 preventing load current being drawn.
-    The dimensions of the cell together with the conductivity of the working fluid give the cell an internal resistance ($R_{ch}$) of approximately \SI{30}{\giga\ohm}.
-    Using these parameters, the available output power from the cell has been calculated and is presented in Fig.~\ref{fig:cellPowerPressure} with respect to the applied pressure.
+    % Based on measurements of the \SI{52i}{\micro\meter} channel we estimate the amount of electrical power available for harvesting.
+    % Fig.~\ref{fig:equivalentCircuit} shows the equivalent circuit for a streaming potential cell delivering a streaming current ($I_{S}$).
+    % The the streaming potential ($V_{S}$) was measured with no load resistance ($R_{L}$) due to the use of the E5270 preventing load current being drawn.
+    % The dimensions of the cell together with the conductivity of the working fluid give the cell an internal resistance ($R_{ch}$) of approximately \SI{30}{\giga\ohm}.
+    % Using these parameters, the available output power from the cell has been calculated and is presented in Fig.~\ref{fig:cellPowerPressure} with respect to the applied pressure.
 
 
 
-    \begin{figure}
-        \begin{center}
-        \includegraphics[width=\linewidth]{StreamingCell_EquivalentCircuit}
-        \end{center}
-        \caption{Equivalent circuit of the streaming potential cell.
-        Streaming current is produced by the current source and is denoted $I_{S}$.
-        The internal channel resistance is $R_{ch}$ and an external load is denoted as $R_{L}$}
-        \label{fig:equivalentCircuit}
-    \end{figure}
-
-    \begin{figure}
-        \begin{center}
-        \includegraphics[width=\linewidth]{graph_powerPressure}
-        \end{center}
-        \caption{Maximum power available to an external load placed across the \SI{52}{\micro\meter} cell as a function of pressure differential. Power has been calculated using a load resistance of \SI{30}{\giga\ohm} where only half of total power is available to the load. Note that the units of power are expressed in picoWatts.}
-        \label{fig:cellPowerPressure}
-    \end{figure}
+    % \begin{figure}
+    %     \begin{center}
+    %     \includegraphics[width=\linewidth]{graph_powerPressure}
+    %     \end{center}
+    %     \caption{Maximum power available to an external load placed across the \SI{52}{\micro\meter} cell as a function of pressure differential. Power has been calculated using a load resistance of \SI{30}{\giga\ohm} where only half of total power is available to the load. Note that the units of power are expressed in picoWatts.}
+    %     \label{fig:cellPowerPressure}
+    % \end{figure}
 
 
     \section{Estimation of Harvestable Energy From A Typical New Zealand Dwelling}
@@ -227,10 +221,9 @@
     The during that time five uses of a washing machine, fourteen showers and fifty six toilet flushes occur.
     A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}.
 
-    Figure~\ref{fig:headloss} shows the head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT 25mm).~\cite{WatercareNewZealand2014}
-    Using this pressure loss curve we calculate the amount of power dissipated by a typical water meter during an average washing machine cycle, shower, and toilet flush.
-    Calculated pressure loss due to each of these events is presented as figure~\ref{fig:powerDissipated_meter}.
-    The total energy dissipated within the water meter for each of the water events is:
+    Figure~\ref{fig:headloss} shows the pressure head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT 25mm).~\cite{WatercareNewZealand2014}
+    Using this curve we calculate power dissipation in a water meter during a washing machine cycle, shower, and toilet flush; presented as Fig.~\ref{fig:powerDissipated_meter}
+    The total energy dissipated within the meter for each events is:
     \begin{itemize}
     \item \SI{547}{\joule} per load of washing,
     \item \SI{222}{\joule} per shower, and
@@ -240,10 +233,10 @@
     % These figures are based on average duration and flow rates as found in \cite{Heinrich2008}, and the estimated head loss from Fig.~\ref{fig:headloss}.
     Over an average week the the reference water meter would dissipate approximately \SI{7.20}{\kilo\joule} of energy; averaging \SI{1.03}{\kilo\joule} per day.
 
-    \section{Estimation of Power Requirements}
+    \section{Estimation of Energy Requirements}
     \label{sect:powerRequirements}
     In \cite{Jones2011} we measure the energy efficiency of various low-power microcontrollers.
-    Here we take measured data from that paper to estimate processor energy requirements.
+    Here we take measured data from that paper to estimate a smart meter's energy requirements.
     Measurements of an Atmel ATtiny 25V have been used as it offered good performance over a wide range of processor functions.
     A crude estimation of the processor's event loop is as follows:
     \begin{itemize}
@@ -259,10 +252,9 @@
     \item Write 10 bytes to non-volatile memory (\SI{394}{\micro\joule})
     \end{itemize}
 
-    The energy requirements for a 100 byte data transmission over ZigBee (Digi International XBee S2) is presented as Fig.~\ref{fig:xbeePower}.
-    This measurement was recorded using a Tektronix TDC 2012 Digital Storage Oscilloscope across a \SI{10.2}{\ohm} current sense resistor.
+    The energy requirements for a 100 byte data transmission over ZigBee (Digi International XBee S2) is presented as Fig.~\ref{fig:xbeePower} (recorded using a Tektronix TDC 2012 Digital Storage Oscilloscope across a \SI{10.2}{\ohm} current sense resistor).
 
-    Our figures show a monitoring and transmitting device needs \SI{6.96}{\joule} per day to operate in ideal transmission conditions.
+    Our estimation shows a monitoring and transmitting device would need about \SI{6.96}{\joule} per day to operate in ideal transmission conditions.
     If the transmitter were to require $100\times$ more energy to transmit, as an estimate of poor conditions, the energy requirements would jump to \SI{9.39}{\joule} per day.
     It is therefore estimated that an energy harvester would need to deliver approximately \SI{10}{\joule} of energy per day.
 
@@ -274,13 +266,15 @@
         \label{fig:xbeePower}
     \end{figure}
 
-    \section{Estimation of Streaming Cell Harvester}
-    \label{sect:harvesterSize}
-    We have estimated that a harvester would need to harvest approximately \SI{10}{\joule} of energy per day.
-    We have calculated that approximately \SI{1}{\kilo\joule} of energy is dissipated per day inside a typical water meter at a two occupant dwelling.
-    Therefore we predict that a harvester needs to capture only 1\% of the energy lost in a typical domestic water meter in order to operate a basic smart metering device.
-
+    % \section{Estimation of Streaming Cell Harvester}
+    % \label{sect:harvesterSize}
     \section{Conclusion}
+    We have calculated approximately \SI{1}{\kilo\joule} of energy is dissipated per day inside a typical water meter at a two occupant dwelling.
+    We have estimated that a harvester would need to harvest approximately \SI{10}{\joule} of energy per day to record and transmit water consumption data.
+    Therefore an energy harvester with an energy conversion efficiency of 1\% is required.
+    Streaming cells we constructed produced conversion efficiencies in the order of $1\times 10^{-6}\%$.
+
+    % \section{Conclusion}
     \bibliographystyle{plain}
     \bibliography{library}
 
