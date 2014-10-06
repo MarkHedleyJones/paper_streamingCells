@@ -3,7 +3,6 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{siunitx}
-\usepackage[dvipsnames]{color}
 
 \title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}
 
@@ -323,7 +322,6 @@
     Building such a device could be achieved by stacking \SI{1970000} glass channels, each of width \SI{984}{\metre} and thickness \SI{500}{\micro\metre}, creating a harvester that is \SI{984}{\square\metre} in size.
     Keeping the channel length at \SI{1}{\centi\meter}, it may be possible to fit the required channels into a \SI{22.0}{\cubic\meter} volume.
 
-
     \begin{figure}
         \begin{center}
         \includegraphics[]{harvester}
@@ -334,20 +332,20 @@
         \label{fig:harvester}
     \end{figure}
 
-
-
     \section{Conclusion}
     \label{sect:conclusion}
-    Approximately 100 times the required power to operate an automatic meter reader and transmitter is already dissipated inside today's mechanical water meters.
+    Approximately $100\times$ the required power to operate an automatic meter reader and transmitter is already dissipated inside today's mechanical water meters.
     The streaming cells we constructed produced conversion efficiencies in the order of \SI{1}{\micro\percent}.
     Scaling of these streaming cells to create a viable harvester would result in a \SI{22}{\cubic\metre} volume of glass with a mass of \SI{54}{\mega\gram}.
     This is far from being a practical solution to the battery operated devices currently in use.
+
     Theoretical methods proposed in the literature to increase the efficiency of streaming cells would reduce the figures presented.
     Regardless of the efficiency of the cells, it is expected that such narrow openings in domestic water feeds will eventually become clogged.
-    It is our conclusion that energy harvesting for the purpose of automatic meter reading using streaming cells is not a practical option.
-    Other methods of energy harvesting from water flow should produce favourable results based on the abundance of available energy.
 
-    \bibliographystyle{plain}
+    It is our conclusion that energy harvesting using streaming cells for the purpose of automatic meter reading is not practical.
+    Other methods of energy harvesting from water flow should produce favourable results.
+    This is based on the quantity of energy already dissipated within today's mechanical meters.
+    \bibliographystyle{ieeetr}
     \bibliography{library}
 
 \end{document}
