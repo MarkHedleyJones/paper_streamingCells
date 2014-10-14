@@ -56,7 +56,7 @@
 
     Channels can be created individually using a range fabrication methods, such as chemical etching or using narrowly separated parallel plates.
     They can also be formed en-mass by using porous materials such as glass or ceramics, where the pores themselves act as channels.
-    
+
     Glass has the attractive property that it obtains a negative surface charge when in contact with water.
     This surface charge is caused by the deprotonation of surface silanol groups in glass (SiOH~$\leftrightarrows$~SiO$^{-}+$~H$^{+}$).~\cite{Kirby2004a}
     By immersing a glass channel in an electrolyte solution, double layers of counter-ions (positive ions in this case) occupy the interior walls of the channel.
@@ -241,13 +241,13 @@
     In \cite{Heinrich2008} the authors monitor water consumption of 51 homes throughout Auckland, New Zealand between February and September of 2008.
     The report shows that the majority of domestic water is consumed by the shower (30\%), washing machine (27\%) and toilet (20\%).
     Together these account for over three quarters of the indoor water usage in the average home.
-    
+
     We have created a flow profile, using data from both \cite{Heinrich2008} and \cite{Heinrich2007}, from which to calculate the available energy.
     The profile fits the usage statistics of a home with two occupants according to the previously mentioned reports over the duration of a week.
     During that time five uses of a washing machine, fourteen showers and fifty six toilet flushes occur.
     A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}.
 
-    Figure~\ref{fig:headloss} shows the pressure head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT 25mm).~\cite{WatercareNewZealand2014}
+    Figure~\ref{fig:headloss} shows the pressure head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT \SI{25}{\milli\meter}).~\cite{WatercareNewZealand2014}
     Using this curve we calculate power dissipation in a water meter during a washing machine cycle, shower, and toilet flush; presented as Fig.~\ref{fig:powerDissipated_meter}.
     The total energy dissipated within the meter for each events is:
     \begin{itemize}
@@ -267,13 +267,13 @@
     A crude estimation of the processor's event loop is as follows:
     \begin{itemize}
     \item Sleep for \SI{1}{\second} (\SI{97.4}{\nano\joule})
-    \item Execute 1 000 instructions (\SI{1.14}{\micro\joule})
+    \item Execute \SI{1000} instructions (\SI{1.14}{\micro\joule})
     \item Take 2 ADC measurements (\SI{2.56}{\nano\joule})
     \item Write 2 bytes to non-volatile memory (\SI{79.0}{\micro\joule})
     \end{itemize}
     Every six hours the device will transmit metered data by doing the following actions:
     \begin{itemize}
-    \item Execute 1 000 000 instructions (\SI{1.14}{\milli\joule})
+    \item Execute \SI{1000000} instructions (\SI{1.14}{\milli\joule})
     \item Transmit 100 bytes of data over ZigBee radio (\SI{12.3}{\milli\joule})
     \item Write 10 bytes to non-volatile memory (\SI{394}{\micro\joule})
     \end{itemize}
@@ -299,7 +299,7 @@
     Auckland tap water has a sodium content of 2.1--26.0\thinspace mg/L.~\cite{WatercareNewZealand2012}
     This equates to a Debye length in the range 0.3--\SI{1.0}{\nano\metre} and therefore the optimum channel height between 0.6--\SI{2.1}{\nano\metre}.
     We envision a harvester made from stacked layers of glass, each layer forming a rectangular channel similar to those constructed earlier.
-    
+
     Such a harvester would be installed as shown in Fig.~\ref{fig:harvester} to control the pressure loss within the harvester.
     Using the head loss curve from Fig.~\ref{fig:headloss}, a flow rate of \SI{7.50}{\litre\per\minute} would produce a pressure differential of \SI{4.5}{\kilo\pascal}.
     Fig.~\ref{fig:cellVoltagePressure} confirms that the harvester output is linearly proportional to the pressure applied.
@@ -314,8 +314,8 @@
 
     From the dimensions of the cell constructed and measured in Section~\ref{sect:streamingCell} we can expect \SI{152}{\nano\watt\per\metre} of channel width.
     We assume here that doubling the width of a channel will double the output power of the channel.
-    
-    To increase the efficiency of the channel the internal height needs to be reduced by a factor of \SI{52 600}, from \SI{71}{\micro\metre} to \SI{1.35}{\nano\metre} (the midpoint between \SI{0.6}{\nano\metre} and \SI{2.1}{\nano\metre}).
+
+    To increase the efficiency of the channel the internal height needs to be reduced by a factor of \SI{52600}, from \SI{71}{\micro\metre} to \SI{1.35}{\nano\metre} (the midpoint between \SI{0.6}{\nano\metre} and \SI{2.1}{\nano\metre}).
     Doing so decreases the normalised output power of the streaming cell to \SI{2.89}{\pico\watt\per\metre}.
     Therefore the width of a channel required to generate the target \SI{5.6}{\milli\watt} is \SI{1.94}{\giga\metre}.
 
@@ -334,7 +334,7 @@
 
     \section{Conclusion}
     \label{sect:conclusion}
-    Approximately $100\times$ the required power to operate an automatic meter reader and transmitter is already dissipated inside today's mechanical water meters.
+    Approximately one hundred times the required power to operate an automatic meter reader and transmitter is already dissipated inside today's mechanical water meters.
     The streaming cells we constructed produced conversion efficiencies in the order of \SI{1}{\micro\percent}.
     Scaling of these streaming cells to create a viable harvester would result in a \SI{22}{\cubic\metre} volume of glass with a mass of \SI{54}{\mega\gram}.
     This is far from being a practical solution to the battery operated devices currently in use.
