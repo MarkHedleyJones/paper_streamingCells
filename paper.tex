@@ -3,6 +3,7 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{siunitx}
+\usepackage{cite}
 
 \title{Feasibility of Harvesting Power To Run A Domestic Water Meter Using Streaming Cell Technology}
 
@@ -46,15 +47,15 @@
         \label{fig:streamingPrinciple}
     \end{figure}
 
-    A double layer is comprised of two individual layers; the Stern and diffuse layers.
-    The Stern layer refers to immobilised counter-ions bound directly to the liquid-solid interface.~\cite{Salieb-Beugelaar2009}
-    The diffuse layer surrounds the Stern layer and contains counter-ions that are not so strongly bound as to be immobile.
-    The thickness of the double layer is defined as the Debye length ($l_{D}$) and is dependant upon the ionic concentration of the liquid.~\cite{Israelachvili2011}
+    A double layer is comprised of two individual layers; the \emph{compact} and \emph{diffuse} layers.
+    The compact layer refers to immobilised counter-ions bound directly to the liquid-solid interface.~\cite{Salieb-Beugelaar2009}
+    The diffuse layer surrounds the compact layer and contains counter-ions that are not so strongly bound as to be immobile.
+    The thickness of the double layer is defined as the Debye length ($l_{D}$) and is dependant upon the ionic concentration of the liquid and the electric potential on the solid surface.~\cite{Israelachvili2011}
     When the dimensions of a streaming cell channel become small enough, double layers will overlap.
     Overlapping double layers mean that any co-ions are repelled from within the channel.
     A simplified diagram showing counter-ions being forced through a streaming cell channel is presented as Fig.~\ref{fig:streamingPrinciple}.
 
-    Channels can be created individually using a range fabrication methods, such as chemical etching or using narrowly separated parallel plates.
+    Channels can be created individually using a range of fabrication methods, such as chemical etching or using narrowly separated parallel plates.
     They can also be formed en-mass by using porous materials such as glass or ceramics, where the pores themselves act as channels.
     
     Glass has the attractive property that it obtains a negative surface charge when in contact with water.
@@ -71,9 +72,9 @@
     \begin{itemize}
         \item 0.01\% by forcing water through porous glass with pore sizes from 10\thinspace--\SI{16}{\micro\metre}.~\cite{Yang2003}
         \item 0.8\% by forcing pure water through a ceramic rod populated with \SI{6}{\micro\metre} pores.~\cite{Yang2004}
-        \item 3\% by forcing sodium chloride solution through a \SI{75}{\nano\metre} by \SI{50}{\micro\metre} silica channel.~\cite{Heyden2007}
-        \item 0.77\% by forcing sodium chloride through a \SI{200}{\nano\metre} pore in an alumina membrane.~\cite{Lu2006}
-        \item 5\% by forcing sodium chloride solution through a \SI{0.5}{\nano\metre} cylindrical pore in polyethylene terephalate foil.~\cite{Xie2008}
+        \item 3\% by forcing a sodium chloride solution through a \SI{75}{\nano\metre} by \SI{50}{\micro\metre} silica channel.~\cite{Heyden2007}
+        \item 0.77\% by forcing a sodium chloride solution through a \SI{200}{\nano\metre} pore in an alumina membrane.~\cite{Lu2006}
+        \item 5\% by forcing a sodium chloride solution through a \SI{0.5}{\nano\metre} cylindrical pore in polyethylene terephalate foil.~\cite{Xie2008}
     \end{itemize}
     These results indicate that small channels using solutions containing salt are more efficient.
     According to \cite{Daiguji2004b}, the efficiency is maximised when the channel height twice that of the Debye length.
@@ -84,15 +85,15 @@
     Techniques to induce hydrodynamic slip at the fluid-solid interface are predicted to increase this efficiency to 30-40\%.~\cite{Davidson2008a, Ren2008a}
     Experimental results utilising slip enhanced channels have not yet been reported in the literature.
     This type of enhancement would overcome the `no-slip boundary condition' at the solid-liquid interface.
-    Slip would mean that ions in the Stern layer, where ionic concentration is highest, could also be moved through the channel.
+    Slip would mean that ions in the compact layer, where ionic concentration is highest, could also be moved through the channel.
     Surface enhanced channels are out of the scope of this study due to cost and manufacturing difficulty.
 
     We address the question of whether it is feasible to build a harvester using readily available materials.
     Such a harvester must produce enough energy to operate a microprocessor and radio communication device.
-    It must collect all of its energy from a domestic water supply without being noticed and be reliable.
+    It must collect all of its energy from a domestic water supply without noticeably affecting the supply, and be reliable.
 
     The remainder of this work is presented as follows.
-    In section~\ref{sect:streamingCell} we build, measure and calculate the conversion efficiency of a simple streaming potential cell.
+    In section~\ref{sect:streamingCell} we build, measure, and calculate the conversion efficiency of a simple streaming potential cell.
     We confirm the relationship between voltage and applied pressure and investigate the effect of channel height.
     In section~\ref{sect:waterConsumption} we estimate the amount of harvestable energy from a domestic water usage profile.
     Section~\ref{sect:powerRequirements} quantifies energy requirements of a simple electronic meter reader with a wireless transmitter.
@@ -117,9 +118,9 @@
     The approximate internal heights of these channels are \SI{245}{\micro\metre}, \SI{178}{\micro\metre}, \SI{161}{\micro\metre}, \SI{125}{\micro\metre}, \SI{106}{\micro\metre}, \SI{75}{\micro\metre}, \SI{71}{\micro\metre}, \SI{56}{\micro\metre}, \SI{52}{\micro\metre}, and \SI{26}{\micro\metre}.
     The channels are made from glass microscope slides (Sail Brand - JIA 7101WT) sectioned into halves.
     Plastic shims (Garlock Colorplast) are epoxied (Selleys Araldite Ultra Clear Resin) between slide halves to separate the slides.
-    The dimensions at each end of each channel are measured under a microscope to determine the channel height once the channels have set.
+    The dimensions at each end of each channel are measured under a microscope to determine the channel height once the epoxy resin has set.
 
-    Each channel is epoxied between two acrylic reservoirs and a base plate.
+    Each channel is then epoxied between two acrylic reservoirs and a base plate.
     This gives a rigid structure under pressure and allows the connection of copper wires and rubber hoses.
     A photo of one of the cells is shown in Fig. \ref{fig:cell}.
 
@@ -130,10 +131,10 @@
 
     Measured pressure-to-voltage gradients from each of the ten streaming cells are presented in Fig.~\ref{fig:cellEfficiency}.
     Spread in the data is attributed to uncertainty in the internal dimensions of each cell.
-    Due to the opacity of the resin used, measurement of the internal cell dimensions was not possible.
+    Due to the opacity of the resin used, measurement of the internal cell widths was not possible.
     The plot shows the relationship between channel height and voltage gradient per Pascal of applied pressure.
-    Each cell had a different flow rate, which this plot does not take into account.
-    Three of the cells burst before flow measurements were obtained.
+    Each cell also had a different flow rate, which this plot does not take into account.
+    Unfortunately, three of the cells burst before flow measurements could be obtained.
     % The \SI{26}{\micro\metre} channel shows a much lower gradient due to . which we expect is a result of a reduced flow rate.
     % The \SI{26}{\micro\metre} cell burst before we obtained flow rate measurements.
 
@@ -247,7 +248,7 @@
     During that time five uses of a washing machine, fourteen showers and fifty six toilet flushes occur.
     A sample of the usage profiles of each item is shown in Fig. \ref{fig:profileSample}.
 
-    Figure~\ref{fig:headloss} shows the pressure head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT 25mm).~\cite{WatercareNewZealand2014}
+    Fig.~\ref{fig:headloss} shows the pressure head loss curve from a water meter typically installed at New Zealand homes (Kent PSMT 25mm).~\cite{WatercareNewZealand2014}
     Using this curve we calculate power dissipation in a water meter during a washing machine cycle, shower, and toilet flush; presented as Fig.~\ref{fig:powerDissipated_meter}.
     The total energy dissipated within the meter for each events is:
     \begin{itemize}
@@ -257,7 +258,7 @@
     \end{itemize}
 
     % These figures are based on average duration and flow rates as found in \cite{Heinrich2008}, and the estimated head loss from Fig.~\ref{fig:headloss}.
-    Over an average week the the reference water meter would dissipate approximately \SI{7.20}{\kilo\joule} of energy; averaging \SI{1.03}{\kilo\joule} per day.
+    Over an average week the reference water meter would dissipate approximately \SI{7.20}{\kilo\joule} of energy; averaging \SI{1.03}{\kilo\joule} per day.
 
     \section{Estimation of Energy Requirements}
     \label{sect:powerRequirements}
@@ -282,7 +283,7 @@
     This trace was recorded using a Tektronix TDC 2012 Digital Storage Oscilloscope across a \SI{10.2}{\ohm} current sense resistor.
 
     Our estimation shows a monitoring and transmitting device would need about \SI{6.96}{\joule} per day to operate in ideal transmission conditions.
-    If the transmitter were to require $100\times$ more energy to transmit, as an estimate of poor conditions, the energy requirements would jump to \SI{9.39}{\joule} per day.
+    If the transmitter were to require one hundred times more energy to transmit, as an estimate of poor conditions, the energy requirements would jump to \SI{9.39}{\joule} per day.
     It is therefore estimated that an energy harvester would need to deliver approximately \SI{10}{\joule} of energy per day.
 
     \begin{figure}
@@ -324,7 +325,7 @@
 
     \begin{figure}
         \begin{center}
-        \includegraphics[]{harvester}
+        \includegraphics[]{harvester2}
         \end{center}
         \caption{Harvester schematic for the streaming cell harvester.
         Most water would bypass the harvester to prevent excessive pressure loss to the consumer.
@@ -334,7 +335,7 @@
 
     \section{Conclusion}
     \label{sect:conclusion}
-    Approximately $100\times$ the required power to operate an automatic meter reader and transmitter is already dissipated inside today's mechanical water meters.
+    Approximately one hundred times the required power to operate an automatic meter reader and transmitter is already dissipated inside today's mechanical water meters.
     The streaming cells we constructed produced conversion efficiencies in the order of \SI{1}{\micro\percent}.
     Scaling of these streaming cells to create a viable harvester would result in a \SI{22}{\cubic\metre} volume of glass with a mass of \SI{54}{\mega\gram}.
     This is far from being a practical solution to the battery operated devices currently in use.
@@ -343,8 +344,7 @@
     Regardless of the efficiency of the cells, it is expected that such narrow openings in domestic water feeds will eventually become clogged.
 
     It is our conclusion that energy harvesting using streaming cells for the purpose of automatic meter reading is not practical.
-    Other methods of energy harvesting from water flow should produce favourable results.
-    This is based on the quantity of energy already dissipated within today's mechanical meters.
+    Based on the quantity of energy already dissipated within mechanical meters, other methods of energy harvesting from water flow should produce favourable results.
     \bibliographystyle{ieeetr}
     \bibliography{library}
 
